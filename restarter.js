@@ -1,0 +1,1 @@
+function restart() {require('./index.js')} // Smartest way
