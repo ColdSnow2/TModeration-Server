@@ -3,15 +3,15 @@
     "index.js": [
       {
         "id": "1f8e88d8-957e-4056-9030-badbf20c08c8",
-        "line": 10,
-        "version": 30370,
-        "index": 255
+        "line": 1,
+        "version": 32360,
+        "index": 0
       },
       {
         "id": "bc528e8b-5e90-476c-9ce2-5364309d4dd1",
-        "line": 10,
-        "version": 30370,
-        "index": 255
+        "line": 1,
+        "version": 32360,
+        "index": 0
       }
     ]
   }

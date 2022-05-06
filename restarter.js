@@ -1,1 +1,1 @@
-function restart() {require('./index.js')} // Smartest way
+globalThis.restart = () => {console.log("Restarting...");botRunner.destroy(); require('./bot.js'); tmoderation()} / Smartest way
