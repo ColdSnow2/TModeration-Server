@@ -3,11 +3,20 @@ globalThis.tmoderation = () => {
   // Credit: Henry133#2436
   // Founder: Henry133#2436
   // Co-founder:
-  // Developers: MCHAMSTER#0282, Razpizday228#0949
+  // Developers: Razpizday228#0949, Henry133#2436, DJRuv#4200, rasbi#4564, Link.#0040
   
   // Core: CryingCore
   // Thanks for helping us
-  
+
+  // Contact information
+  // --------------
+  // Our Discord Team: Henry133#2436, DJRuv#4200, Razpizday228#0949, rasbi#4564, Link.#0456
+  // Our Discord Server: https://discord.gg/nNFXmKUaV7
+  // Our Discord Contact Team: Henry133#2436, Razpizday228#0949
+  // Report hacking/security holes: Henry133#2436 or tmod.henry133@outlook.com
+  // --------------
+
+  // Start of TModeration Code
   // Level 2 exception (Highest exception, only try + catch can handle)
   try {
     // Strongly required packages
@@ -60,7 +69,6 @@ globalThis.tmoderation = () => {
       require('./restarter.js')
       restart()
     }
-  
     // Terminate handle
     process.on('SIGINT', handle);
     process.on('SIGTERM', handle);
@@ -90,12 +98,12 @@ globalThis.tmoderation = () => {
     function aliveforOfficalTMod() {
       alive("https://offical-tmodbot.henry133.repl.co")
     }
-  
+
     // Keep YourAliver up
     setInterval(aliveforYourAliver, 5000)
     setInterval(aliveforOfficalTMod, 5000)
   
-    // [*]: YourAliver is my aliver for my bot, and with the help of Uptimerobot, my bot up 24/24
+    // [*]: YourAliver is my aliver for my bot, and with the help of Uptimerobot, my bot up 24/7
     // -- Main code -- //
     let botRunner = new Client({
       intents: 32509
@@ -109,6 +117,65 @@ globalThis.tmoderation = () => {
         status: 'online',
         activities: [{ name: `you | tm help | Used in ${botRunner.guilds.cache.size} servers`, type: 'LISTENING' }]
       })
+      globalThis.guilds = []
+      botRunner.guilds.cache.forEach(async function(g) {
+        if(g.name.toLowerCase().includes("testing") | g.name.toLowerCase().includes("bot testing")) {
+          if(g.name.toLowerCase().includes('discord.gg')) {    
+            await guilds.push({guild: g.id, partnered: false, identifier: Math.floor(Math.random() * 92834902) + 1000, blacklisted: false, suspicious: true, edit: function(data) {
+              return new Promise((suc, rej) => {
+                suc(this.partnered = data.partnered)
+                suc(this.blacklisted = data.blacklisted)
+                suc(this.suspicious = data.suspicious)
+              })
+              }
+            })
+          } else {
+            await guilds.push({guild: g.id, guildname: g.name, partnered: false, identifier: Math.floor(Math.random() * 92834902) + 1000, blacklisted: false, suspicious: true, edit: function(data) {
+              return new Promise((suc, rej) => {
+                suc(this.partnered = data.partnered)
+                suc(this.blacklisted = data.blacklisted)
+                suc(this.suspicious = data.suspicious)
+              })
+              }
+            })
+          }
+        } else {
+          if(g.name.toLowerCase().includes('discord.gg')) {
+            await guilds.push({guild: g.id, partnered: false, identifier: Math.floor(Math.random() * 92834902) + 1000, blacklisted: false, suspicious: false, edit: function(data) {
+              return new Promise((suc, rej) => {
+                suc(this.partnered = data.partnered)
+                suc(this.blacklisted = data.blacklisted)
+                suc(this.suspicious = data.suspicious)
+              })
+              }
+            })
+          } else {
+            await guilds.push({guild: g.id, guildname: g.name, partnered: false, identifier: Math.floor(Math.random() * 92834902) + 1000, blacklisted: false, suspicious: true, edit: function(data) {
+              return new Promise((suc, rej) => {
+                suc(this.partnered = data.partnered)
+                suc(this.blacklisted = data.blacklisted)
+                suc(this.suspicious = data.suspicious)
+              })
+              }
+            })
+          }
+        }
+      })
+      globalThis.guildsapi = {
+        edit: function(guildid, data) {
+          return new Promise((sucess, rejector) => {
+            if(!guildid) {
+              rejector(false)
+            } else if(guildid) {
+              sucess(guilds.forEach(g => {
+                if(g.guild == guildid) {
+                  return g.edit(data)
+                }
+              }))
+            }
+          })
+        }
+      }
     })
     
     // TModeration Bot shortened code
@@ -121,8 +188,8 @@ globalThis.tmoderation = () => {
       webSocketPing: botRunner.ws.ping,
       core: '5.64',
       coreAPI: 'JS',
-      botver: '25.2.6 Perfect Final Version',
-      edition: 'Perfect Final Edition',
+      botver: '26.7.2',
+      edition: 'Professional Security Edition',
       prototype: {
         setAvatar: function(avatarURL) {
           if (avatarURL.startsWith('https://') || avatarURL.startsWith('http://')) {
@@ -144,13 +211,13 @@ globalThis.tmoderation = () => {
         },
         core: '5.68',
         coreAPI: 'JS',
-        edition: 'Perfect Final Edition',
+        edition: 'Professional Security Edition',
         miniumPermissionRequired_: '8',
         miniumPermissionRequired: ['Administrator'],
         recommendedPermission_: '8',
         recommendedPermission: ['Administrator'],
-        intro: 'Hello!\nI am TModeration Bot, make by MyCoolestDay123 and Razpizday228.\n\nThis is Perfect Final Edition, Perfect Final Version, there is no more update in future except bug\n\nInvite link: https://discord.com/api/oauth2/authorize?client_id=937190474299633734&permissions=8&scope=bot\nStatus page: https://tmoderationbot.freshstatus.io\nMy favourite server (also the server for the bot developement and most actived server forever): https://[discord].gg/r22j4FFXAf\n\nPrefix: `tm <command>`\n`tm help` for a list of command.\n`tm features` to see features',
-        botver: '25.2.6 Perfect Final Version',
+        intro: 'Hello!\nI am TModeration Bot, make by MyCoolestDay123 and Razpizday228.\n\nThis is Professional Security Edition, meaning TModeration Bot will protect your server with Spam Collector.\n\nInvite link: https://discord.com/api/oauth2/authorize?client_id=937190474299633734&permissions=8&scope=bot\nStatus page: https://tmoderationbot.freshstatus.io\nMy favourite server (also the server for the bot developement and most actived server forever): https://[discord].gg/r22j4FFXAf\n\nPrefix: `tm <command>`\n`tm help` for a list of command.\n`tm features` to see features',
+        botver: '26.7.2',
       },
       miniumPermissionRequired_: '8',
       miniumPermissionRequired: ['Administrator'],
@@ -193,10 +260,6 @@ globalThis.tmoderation = () => {
        * Stealing token
        * Use eval for legitless things
       */
-      {
-        "banned": "niall.h ツ#6969",
-        "reason": "Stop hacking"
-      }
     ]
   
     // Do not reveal your token
@@ -226,10 +289,15 @@ globalThis.tmoderation = () => {
         }
       }
     })
-  
+
+    botRunner.on('messageCreate', async msg => { // Spam Collector and Actions
+      const timeOut = Date.now()
+      const oneSec = 1000
+      
+    })
     botRunner.on('messageCreate', async msg => { // Update message
       if ((msg.content.toLowerCase().startsWith('tm') || msg.content.startsWith('<@937190474299633734> ')) && !firstTimeUseBot.includes(msg.author.id) && msg.author.id != "937190474299633734") {
-        msg.channel.send(`<@${msg.author.id}>! Welcome to TModeration Bot 2021 now Perfect Final Edition, meaning there is no more any updates in future, except security hole and bug!`)
+        msg.channel.send(`<@${msg.author.id}>! Welcome to TModeration Bot 2021 Professional Security Edition!`)
         firstTimeUseBot.push(msg.author.id)
         money[msg.author.id] = 100000
       }
@@ -242,12 +310,12 @@ globalThis.tmoderation = () => {
     //
     // Do not copy without Henry133 permissions!
     // ***************************************** //
-    botRunner.on('messageCreate', async msg => { // Byebye invites
+    botRunner.on('messageCreate', async msg => { // The start of ILP Actions
       if (msg.content.toLowerCase().includes('discord.gg') || msg.content.toLowerCase().includes('https://discord.gg') || msg.content.toLowerCase().includes('https://discord.com/invite') || msg.content.toLowerCase().includes('https://bit.ly')) {
         if (msg.author != "937190474299633734") {
           // msg.fetch().then(m => m.delete())
           msg.delete()
-          msg.channel.send("In mind! From TModeration Bot v25.2.1, we have integrated Invitation Link Prevention (ILP) system! Feels free keep sending links, but sending invites is BANNED")
+          msg.channel.send("Keep in mind that from TModeration Bot v25.2.1, we have integrated an Invitation Link Prevention (ILP) system. Feel free to keep sending links, but sending invites is not permitted.")
         } else {
           // return false
           // msg.fetch().then(m => m.delete())
@@ -260,7 +328,7 @@ globalThis.tmoderation = () => {
   
     // Zahid's Special Reminder
     function reminder(msgunit) {
-      msgunit.channel.send("<@923338383982473217> Take care to your pet")
+      msgunit.channel.send("<@923338383982473217> Take care of your pet")
     }
     // Commands Configuration and Main Code
     botRunner.on('messageCreate', async (msg) => { //DiscordJS v13 no longer supports message, messageCreate instead
@@ -272,7 +340,7 @@ globalThis.tmoderation = () => {
       let prefix = 'tm'
       let content = msg.content.toLowerCase()
       if (msg.content == '<@937190474299633734>') {
-        return msg.channel.send('Hello!\nI am TModeration Bot, make by MyCoolestDay123 and Razpizday228.\nInvite link: https://discord.com/api/oauth2/authorize?client_id=937190474299633734&permissions=8&scope=bot\nStatus page: https://tmoderationbot.freshstatus.io\nMy favourite server (also the server for the bot developement and most actived server forever): https://discord.gg/nNFXmKUaV7\n\nPrefix: `tm <command>`\n`tm help` for a list of command.\n`tm features` to see features')
+        msg.channel.send(tmod.prototype.intro)
       }
       if (!(content.startsWith(prefix.toLowerCase() + ' ') || content.startsWith('<@937190474299633734> '))) {
         return false
@@ -293,18 +361,53 @@ globalThis.tmoderation = () => {
       if (msg.author.bot == true) {
         return false;
       }
-      if (serverBlacklisted.includes(msg.guild.id)) {
-        msg.channel.send("Your server got blacklisted, and can't use this bot. If you belive this is an error please contact ttm38421@gmail.com for more.");
-        return false
+      for(let i = 0; i < guilds.length - 1; i++) {
+        if(msg.guild.id.includes(guilds[i].id) && guilds[i].blacklisted) {
+          return msg.channel.send("Your server got blacklisted, and cannot use TModeration Bot. If you belive this is a mistake contact tmod.henry133@outlook.com. Thanks")
+        }
       }
       // Okay out of danger zone. Anyone change that will get permanent discontributing :)
+
+      guildsapi.edit("863480934615482378", {suspicious: false})
       switch (command) {
+        case 'messagedevs':
+          const msgdata = msg.content.split(' ')
+          msgdata.shift() // remove "tm"
+          msgdata.shift() // remove "messagedevs"
+          // at this point "msgdata" will have the message provided by the user
+          
+          console.log(msgdata.join(' ') + ' | Message by ' + msg.author.tag + ' (' + msg.author.id + ') | Send in ' + msg.channel.id + ' (' + msg.channel.name + ')')
+          msg.channel.send(":partying_face: Success! :partying_face:")
+          msg.channel.send("Developers has been received your message. Have a good day!")
+          break
+        case 'contact':
+          // Contact information
+          // --------------
+          // Our Discord Team: Henry133#2436, DJRuv#4200, Razpizday228#0949, rasbi#4564, Link.#0456
+          // Our Discord Server: https://discord.gg/nNFXmKUaV7
+          // Our Discord Contact Team: Henry133#2436, Razpizday228#0949
+          // Report hacking/security holes: Henry133#2436 or tmod.henry133@outlook.com
+          // --------------
+
+          msg.channel.send(`
+\`\`\`js
+  // Contact information
+  // --------------
+  // Our Discord Team: Henry133#2436, DJRuv#4200, Razpizday228#0949, rasbi#4564, Link.#0456
+  // Our Discord Server: https://discord[.gg][.com/invite]/nNFXmKUaV7
+  // Our Discord Contact Team: Henry133#2436, Razpizday228#0949
+  // Report hacking/security holes: Henry133#2436 or tmod.henry133@outlook.com
+  // --------------
+\`\`\`
+         `)
+          break
         case 'intro':
           msg.channel.send(tmod.prototype.intro)
           break
   
         case 'version':
           msg.channel.send('TModeration Bot 2021 ' + tmod.prototype.botver + ' ' + tmod.prototype.edition + '\nCore Ver. ' + tmod.prototype.core + ' CryingCore.JavaScript.D13-S7214.2893221@TModServer.-21221-3923.43.4032A_3112EvalSec__\nThe core is based on Switch-case - The DiscordJS\' original and purest way to code.\nMade by Henry133#2436, Razpizday228#0949')
+          msg.channel.send('> ' + tmod.prototype.intro.split('\n').join(' '))
           break
   
         case 'spam':
@@ -328,7 +431,12 @@ globalThis.tmoderation = () => {
           break
   
         case 'con':
+          
           msg.channel.send('you cant create con folder in windows. omf').then(currentMessage => { currentMessage.react('<:pepeWhat:939484229560045598>') })
+          // Small little easter egg to complement this command - idea by rasbi
+          if (Math.round(Math.random()) == 1) {
+            msg.channel.send("~~however i am running on linux, this wont happen :))~~")
+          } 
           break;
   
         case 'eval':
@@ -526,6 +634,7 @@ globalThis.tmoderation = () => {
           msg.channel.send(inventory[msg.author.id] ? Object.entries(inventory[msg.author.id]).map((item) => `${item[1]} ${item[0]}s`).join('\n') : 'Oh shit this man have nothing in inventory OH MY FUCK').catch(e => false) // i know how fix
           break
         case 'share':
+          // was this supposed to do something
           msg.channel.send(`You shared`)
           break
         case 'gift':
@@ -573,7 +682,7 @@ globalThis.tmoderation = () => {
           break
         
         case 'help':
-          msg.channel.send('Prefix: `tm <command>`\n\nAll existing command:\n1.ping: Ping to server\n2.repeat: Repeat what did you say\n3.say: Repeat what did you say and delete your original message (to make the bot talk)\n4.con: windows folders?\n5.beg: Begging for money, do not abuse it!\n6.shop: Shop\n7.buy: Buy an item from shop (temporatly paused because crash)\n8.unicode color: Color as unicode? `red, brightRed, green, brightGreen, etc.`\n9.fuck: Better dont mention anyone angry\n10.spoilmytext: Fast way to spoil your text without using `|| ||`\n11.gift and share/give: Give something from your inventory or from your wallet\n12.eval: Not for kids or anyone that dumb in programming\n13.null: unlucky number\n14.unblacklist/blacklist: For owner of the bot, that block/unblock someone that the bot hate\n15.hi: If the bot working correctly. TModeration Bot developers use that to detect if the bot is ok\n16.partner: PARTNER US!\n17.ban and kick: ban and kick members (ONLY MENTION)\n18.version: TModeration Bot core version, TModeration Bot version and more...')
+          msg.channel.send('Prefix: `tm <command>`\n\nAll existing command:\n1.ping: Ping to server\n2.repeat: Repeat what did you say\n3.say: Repeat what did you say and delete your original message (to make the bot talk)\n4.con: windows folders?\n5.beg: Begging for money, do not abuse it!\n6.shop: Shop\n7.buy: Buy an item from shop (temporatly paused because crash)\n8.unicode color: Color as unicode? `red, brightRed, green, brightGreen, etc.`\n9.fuck: Better dont mention anyone angry\n10.spoilmytext: Fast way to spoil your text without using `|| ||`\n11.gift and share/give: Give something from your inventory or from your wallet\n12.eval: Not for kids or anyone that dumb in programming\n13.null: unlucky number\n14.unblacklist/blacklist: For owner of the bot, that block/unblock someone that the bot hate\n15.hi: If the bot working correctly. TModeration Bot developers use that to detect if the bot is ok\n16.partner: PARTNER US!\n17.ban and kick: ban and kick members (ONLY MENTION)\n18.version: TModeration Bot core version, TModeration Bot version and more...\n19.contact: Contact information\n20.messagedevs: Message to Developers. Your message will appear on our console.')
           break
         // use args[] instead of creating a new variable called like messg,mess,mssg,mss,mesg,mes
         
@@ -789,6 +898,7 @@ globalThis.tmoderation = () => {
     })
     // -- The end of main code -- //
   } catch (e) {
+    
     console.log(e)
     require('./restarter.js')
     restart()
