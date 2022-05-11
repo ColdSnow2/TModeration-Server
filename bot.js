@@ -24,10 +24,11 @@ globalThis.tmoderation = () => {
       Client,
       MessageActionRow,
       MessageButton,
-      Permissions
+      Permissions,
+      Intents
     } = require('discord.js')
     globalThis.colors = require("colors")
-  
+    
     // Not required packages
     const {
       REST
@@ -43,7 +44,7 @@ globalThis.tmoderation = () => {
       ppid,
       platform
     } = require('process');
-  
+    
     // An exception handling (Level 1 exception (Lowest exception a basic handler can resolve))
     process.on('uncaughtException', (err, origin) => {
       console.log(`Error: ${err}\nOrgin: ${origin}`)
@@ -56,6 +57,7 @@ globalThis.tmoderation = () => {
         return this.cryingdata.push({ data, method })
       },
     }
+
     // Information
     console.log(`The parent process is pid ${ppid}`);
     console.log(`The platform is ${platform}`)
@@ -119,7 +121,6 @@ globalThis.tmoderation = () => {
         }
       );
     }
-  
     function aliveforYourAliver() {
       alive('https://youraliver.henry133.repl.co')
     }
@@ -135,15 +136,12 @@ globalThis.tmoderation = () => {
     // [*]: YourAliver is my aliver for my bot, and with the help of Uptimerobot, my bot up 24/7
     // -- Main code -- //
     let botRunner = new Client({
-      ws: { intents: 32511 },
-      restTimeOffset: 0,
-      rateLimitAsError: true,
-      disableMentions: "everyone",
+      intents: 32509,
     }) // A client
+
     
-    // Setup
     botRunner.login(process.env.REPL_SYSTEM_ID) // Login
-    
+    // Setup
     botRunner.once('ready', () => { // Once the bot ready, doing this
       console.log(colors.cyan("I am ") + colors.red(botRunner.user.tag).underline)
       botRunner.user.setPresence({
@@ -210,12 +208,7 @@ globalThis.tmoderation = () => {
         }
       }
     })
-
-    // Sharding
-    botRunner.on('ready', () => {
-      require('./ShardingCreate.js')
-      createShard(botRunner.token)
-    })
+    
     // TModeration Bot shortened code
     const tmod = {
       originalName: "TModeration Bot 2021",
