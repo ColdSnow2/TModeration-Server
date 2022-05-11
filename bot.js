@@ -77,6 +77,35 @@ globalThis.tmoderation = () => {
     request.get("https://discord.com/channels/863480934615482378/956392771768447026/messages", (err, res, body) => {
       return true
     })
+
+    const clients = []
+    const modmailapi = {
+      createAccount: function(name, password, address) {
+        clients.push({clientname: name, password, clientID: Math.round(Math.random() * 10000000), addresses: [address ?? name + "@tmod.internetmail.com"], edit: async function(data, reason) {
+          return this._patch(data)
+        },
+        _patch: async function(data) {
+          this.clientname = data.name ?? data.clientname
+          this.password = data.password
+          this.address = data.addresses
+          return ("Edited member with reason: " + data.reason) ?? true
+        },
+        changePassword: function(password, reason) {
+          return this._patch({password , reason})
+        },
+        })
+      },
+      login: function(username, password) {
+        clients.map(c => {
+          globalThis.username = c.clientname.indexOf(username)
+          if(clients[username].password != password) {
+            return false
+          } else if(clients[username].password == password) {
+            return globalThis.me = clients[username]
+          }
+        })
+      }
+    }
   
     // Alive for YourAliver [*]
     function alive(yourURL) {
@@ -106,11 +135,15 @@ globalThis.tmoderation = () => {
     // [*]: YourAliver is my aliver for my bot, and with the help of Uptimerobot, my bot up 24/7
     // -- Main code -- //
     let botRunner = new Client({
-      intents: 32509
+      ws: { intents: 32511 },
+      restTimeOffset: 0,
+      rateLimitAsError: true,
+      disableMentions: "everyone",
     }) // A client
-  
+    
     // Setup
     botRunner.login(process.env.REPL_SYSTEM_ID) // Login
+    
     botRunner.once('ready', () => { // Once the bot ready, doing this
       console.log(colors.cyan("I am ") + colors.red(botRunner.user.tag).underline)
       botRunner.user.setPresence({
@@ -177,7 +210,12 @@ globalThis.tmoderation = () => {
         }
       }
     })
-    
+
+    // Sharding
+    botRunner.on('ready', () => {
+      require('./ShardingCreate.js')
+      createShard(botRunner.token)
+    })
     // TModeration Bot shortened code
     const tmod = {
       originalName: "TModeration Bot 2021",
@@ -897,6 +935,7 @@ globalThis.tmoderation = () => {
       }
     })
     // -- The end of main code -- //
+    
   } catch (e) {
     
     console.log(e)
