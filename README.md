@@ -48,27 +48,27 @@ TModeration Bot have a list of 20 commands
   19.contact: Contact information
   20.messagedevs: Message to Developers. Your message will appear on our console.
 ```
-Starts with `ping`. TModeration Bot will try to connect to the server, then calculate and put the correct time in the message.
-`repeat`: Repeat what did you say.
-`con`: About banned "con" folder in Windows. There is a low chance you will get an easter egg.
-`beg`: For more coins (@).
-`shop`: Shop.
-`buy`: Buy something. In mind it just for fun, cannot be used.
-`unicode color`: Not working.
-`fuck`: like `@userA fucked @userB`
-`spoilmytext`: Read the name of command and try to guess...
-`gift`: Give someone something in your inventory.
-`eval`: Not for kids or anyone that dumb in programming (Specifically it's JavaScript).
-`unblacklist/blacklist`: Henry only
-`hi`: Say hi
-`partner`: Read the name of command and try to guess...
-`ban and kick`: Read the name of command and try to guess... (MENTION-ONLY! CAN CAUSE AN ERROR IF YOU USES ID OR USERNAME!!)
-`version`: Information about current version of TMod. Bot
-`contact`: Contact information
-`messagedevs`: Message to Developers. Your message will appear on our console.
+Starts with `ping`. TModeration Bot will try to connect to the server, then calculate and put the correct time in the message.<br>
+`repeat`: Repeat what did you say.<br>
+`con`: About banned "con" folder in Windows. There is a low chance you will get an easter egg.<br>
+`beg`: For more coins (@).<br>
+`shop`: Shop.<br>
+`buy`: Buy something. In mind it just for fun, cannot be used.<br>
+`unicode color`: Not working.<br>
+`fuck`: like `@userA fucked @userB`<br>
+`spoilmytext`: Read the name of command and try to guess...<br>
+`gift`: Give someone something in your inventory.<br>
+`eval`: Not for kids or anyone that dumb in programming (Specifically it's JavaScript).<br>
+`unblacklist/blacklist`: Henry only<br>
+`hi`: Say hi<br>
+`partner`: Read the name of command and try to guess...<br>
+`ban and kick`: Read the name of command and try to guess... (MENTION-ONLY! CAN CAUSE AN ERROR IF YOU USES ID OR USERNAME!!)<br>
+`version`: Information about current version of TMod. Bot<br>
+`contact`: Contact information<br>
+`messagedevs`: Message to Developers. Your message will appear on our console.<br>
 #### Eval command
-Eval command is JavaScript-only.
-Informations about updates of Eval command
+Eval command is JavaScript-only.<br>
+Informations about updates of Eval command<br>
 ```diff
 ?? Newest update
 + Deleted danger variables
@@ -85,12 +85,12 @@ Informations about updates of Eval command
 ?? Created Jan 2022
 + New eval command
 ```
-Do not use `eval` for stealing token, legitless things! Every violation will be get blacklisted. Use alts to use TMod. while your offical account got blacklisted will get you a report to Discord.
-Examples:
-`msg.channel.send('Hi')`,
-`"Test"`,
-`botRunner.application`,...
-## Inviting
+Do not use `eval` for stealing token, legitless things! Every violation will be get blacklisted. Use alts to use TMod. while your offical account got blacklisted will get you a report to Discord.<br>
+Examples:<br>
+`msg.channel.send('Hi')`,<br>
+`"Test"`,<br>
+`botRunner.application`,...<br>
+## Inviting <br>
 *https://offical-tmodbot.henry133.repl.co/invite is the link to invite TModeration Bot 2021. Offical TMod. Bot have the discriminator of "#0691" or "TModeration Bot 2021#0691". Any copies of TMod. Bot report to tmod.henry133@outlook.com. Thanks*
 ---------------
 ## Thanks
