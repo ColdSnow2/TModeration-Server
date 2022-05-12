@@ -91,7 +91,7 @@ Examples:<br>
 `"Test"`,<br>
 `botRunner.application`,...<br>
 ## Inviting <br>
-<p><i>https://offical-tmodbot.henry133.repl.co/invite is the link to invite TModeration Bot 2021. Offical TMod. Bot have the discriminator of "#0691" or "TModeration Bot 2021#0691". Any copies of TMod. Bot report to tmod.henry133@outlook.com. Thanks</i></p>
+*<p>https://offical-tmodbot.henry133.repl.co/invite is the link to invite TModeration Bot 2021. Offical TMod. Bot have the discriminator of "#0691" or "TModeration Bot 2021#0691". Any copies of TMod. Bot report to tmod.henry133@outlook.com. Thanks</p>*
 ---------------
 ## Thanks
 Thanks for using TModeration Bot. Feel free to create issues if you feel there is a real issue. Again, thanks for using TModeration Bot!
