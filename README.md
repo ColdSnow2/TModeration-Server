@@ -1,13 +1,14 @@
 ## TModeration Bot 2021
 #### What's this?
-TModeration Bot is made in NodeJS and Discord.JS
-TModeration Bot is a Henry's trusted bot. The bot for fun, economy, moderating, developer tools with **OPEN FREE NO LIMITED** JavaScript eval integrated.
+TModeration Bot is made in node.js and discord.js
+TModeration Bot is a bot for fun, economy, moderating, developer tools with a **free and no-limits** JavaScript eval integrated.
 #### Prefix
-TMod. Bot's default prefix is `tm<space><command>`
+TMod. Bot's default prefix is `tm <command>`
 (<...> is __**REQUIRED**__)
+
 #### What's the special thing in TModeration Bot?
-As i said, TModeration Bot have an open eval command.
-Also, the bot have integrated Invitation Link Prevention (ILP) so it protect your server out of advertismenting.
+TModeration has an eval command which lets you run any JavaScript code in the bot.
+The bot also has invite link protection, which deletes messages containing Discord server invites.
 #### HEY HEY, SOMEONE VIOLATED THE RULES!
 The rules is
 ```js
@@ -74,9 +75,8 @@ Informations about updates of Eval command<br>
 + Deleted danger variables
 + More securely eval with the Try-To-Guess system
 + Stored TMod's token to a special variable and make a system that replace the bot token when triggered to null
-+ "fs" is removed
-- No more fs
-- No danger variables
+- "fs" is removed
+- No dangerous variables
 ?? Update April 27th 2022
 + Deleted danger variables
 - No danger variables
@@ -85,13 +85,13 @@ Informations about updates of Eval command<br>
 ?? Created Jan 2022
 + New eval command
 ```
-Do not use `eval` for stealing token, legitless things! Every violation will be get blacklisted. Use alts to use TMod. while your offical account got blacklisted will get you a report to Discord.<br>
+Do not use `eval` for stealing the bot's token or doing anything that can harm the bot. Every violation of the bot will get you blacklisted. Using alts to use TMod. while your official account is blacklisted will result in your accounts also being blacklisted.<br>
 Examples:<br>
 `msg.channel.send('Hi')`,<br>
 `"Test"`,<br>
 `botRunner.application`,...<br>
 ## Inviting <br>
-<p><i>https://offical-tmodbot.henry133.repl.co/invite is the link to invite TModeration Bot 2021. Offical TMod. Bot have the discriminator of "#0691" or "TModeration Bot 2021#0691". Any copies of TMod. Bot report to tmod.henry133@outlook.com. Thanks</p></i>
+<p><i>https://offical-tmodbot.henry133.repl.co/invite is the link to invite TModeration Bot 2021. Official TMod. Bot have the discriminator of "#0691" or "TModeration Bot 2021#0691". Any copies of TMod. Bot report to tmod.henry133@outlook.com. Thanks</p></i>
 
 ---------------
 ## Thanks
