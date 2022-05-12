@@ -90,8 +90,7 @@ Examples:
 `msg.channel.send('Hi')`,
 `"Test"`,
 `botRunner.application`,...
----------------
-#### Inviting
+## Inviting
 *https://offical-tmodbot.henry133.repl.co/invite is the link to invite TModeration Bot 2021. Offical TMod. Bot have the discriminator of "#0691" or "TModeration Bot 2021#0691". Any copies of TMod. Bot report to tmod.henry133@outlook.com. Thanks*
 ---------------
 ## Thanks
