@@ -113,9 +113,6 @@ botRunner.on('messageCreate', async (msg) => { //discordjs v13 uses messageCreat
 			dat.shift()
 		  dat.shift()
 			msg.delete().then(message => {message.channel.send(dat.join(' '))})
-      msg.delete().then(message => {message.channel.send(dat.join(' '))})
-      msg.delete().then(message => {message.channel.send(dat.join(' '))})
-      msg.delete().then(message => {message.channel.send(dat.join(' '))})
 			break;
 
 		case "shop": 
