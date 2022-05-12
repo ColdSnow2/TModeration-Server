@@ -1,7 +1,7 @@
 const { Client } = require('discord.js')
 globalThis.colors = require("colors")
 
-/ a server for that
+// a server for that
 const http = require('http')
 http.createServer(function (request, respond) { // res is resond, req is request
   respond.write('Hello World!');
