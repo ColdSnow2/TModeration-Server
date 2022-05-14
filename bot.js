@@ -136,7 +136,7 @@ globalThis.tmoderation = () => {
     // [*]: YourAliver is my aliver for my bot, and with the help of Uptimerobot, my bot up 24/7
     // -- Main code -- //
     let botRunner = new Client({
-      intents: 32509,
+      intents: new Intents(32509)
     }) // A client
 
     
@@ -285,11 +285,11 @@ globalThis.tmoderation = () => {
       /* Blacklisted members writes here
        ~~!! -- INCLUDES -- !!~~
        
-       * Underage/Breaking Discord ToS
-       * Killing the bot
+       * Breaking Discord ToS
+       * Shutting down the bot
        * Henry's hater
        * Stealing token
-       * Use eval for legitless things
+       * Using eval to harm bot
       */
     ]
   
@@ -384,7 +384,7 @@ globalThis.tmoderation = () => {
       
       command = args[1].toLowerCase()
       tmod.cache.timeUsed++
-      console.log(msg.author.tag + ' issued the bot')
+      console.log(msg.author.tag + ' issued the bot in ' + msg.guild.name)
       // DO NOT CHANGE THAT
       if (blacklist.map(user => user.banned).includes(msg.author.tag)) {
         msg.channel.send("you are currently blacklisted, idiot\nreason: "); return false // wait what are you doing
@@ -743,6 +743,26 @@ globalThis.tmoderation = () => {
             }
           }
           break;
+
+        case 'timeout':
+          const intArgs = msg.content.split(' ')
+          intArgs.shift()
+          intArgs.shift()
+          const memberToTimeout = msg.mentions.members.first().id
+          const duration = intArgs[1]
+          
+          // Let's come into the main action - Timeout
+          msg.guild.members.cache.fetch(memberToTimeout)
+            .then(m => {
+              m.timeout(duration, intArgs[2] ?? "No reason provided about this action.")
+              m.send("You've got timed out in " + msg.guild.name + " (" + msg.guild.id + ") with reason: " + (intArgs[2] ?? "No reason provided about this action."))
+              msg.channel.send("Timed out sucessfully")
+            })
+            .catch(e => {
+              msg.channel.send(e ?? "Unknown error and/or Permission error")
+            })
+
+          break;
         
         case 'blacklist':
           if (msg.author.id != '927563409409581066') {
@@ -775,24 +795,26 @@ globalThis.tmoderation = () => {
               }
             }).catch(e => { msg.channel.send('You ran out of time. take @ 10000'); money[msg.author.id] += 10000 })
           }
-          checkIf()
-          function t(opt) {
-            if (!opt) {
-              if (command == 'work') {
-                return false
-              }
-            } else {
-              if (opt == 'yes') {
+          /*
+            checkIf()
+            function t(opt) {
+              if (!opt) {
                 if (command == 'work') {
-                  return true
+                  return false
+                }
+              } else {
+                if (opt == 'yes') {
+                  if (command == 'work') {
+                    return true
+                  }
                 }
               }
             }
-          }
-          setTimeout(end, 60000)
-          function end() {
-            t('yes')
-          }
+            setTimeout(end, 60000)
+            function end() {
+              t('yes')
+            }
+          */
           break
         
         case 'unblacklist':
