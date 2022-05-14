@@ -702,8 +702,11 @@ globalThis.tmoderation = () => {
           const mssg = msg.content.split(' ')
           mssg.shift()
           mssg.shift()
+          
           const send = mssg.join(' ').toString()
-          msg.channel.send(`||${send}||`)
+          msg.channel.send(`${msg.author.username} says ||${send}||`)
+          
+          await msg.delete()
           break
         
         case 'fuck':
@@ -731,7 +734,7 @@ globalThis.tmoderation = () => {
           const activrespon = ['LOL', 'yes', 'okay', 'why not?', 'i will do it rn!']
           const badrespon = ['Never', 'SEEYA IDIOTT', 'No', 'i want to say... YOU SUCK LOL']
   
-          if (msg.content.includes('is zahid nice') || msg.content.includes('zahid')) {
+          if (msg.content.includes('zahid')) {
             msg.channel.send(`:8ball: ${badrespon[Math.floor(Math.random() * (badrespon.length - 1))]}`)
           } else {
             function randomChoose() { return Math.floor(Math.random() * 2) + 1 }
