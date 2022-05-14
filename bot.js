@@ -748,13 +748,13 @@ globalThis.tmoderation = () => {
           const intArgs = msg.content.split(' ')
           intArgs.shift()
           intArgs.shift()
-          const memberToTimeout = msg.mentions.members.first().id
+          const memberToTimeout = msg.mentions.members.first().user.id
           const duration = intArgs[1]
           
           // Let's come into the main action - Timeout
-          msg.guild.members.cache.fetch(memberToTimeout)
+          msg.guild.members.fetch(memberToTimeout)
             .then(m => {
-              m.timeout(duration, intArgs[2] ?? "No reason provided about this action.")
+              m.timeout(parseInt(duration), intArgs[2] ?? "No reason provided about this action.")
               m.send("You've got timed out in " + msg.guild.name + " (" + msg.guild.id + ") with reason: " + (intArgs[2] ?? "No reason provided about this action."))
               msg.channel.send("Timed out sucessfully")
             })
