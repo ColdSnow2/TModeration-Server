@@ -95,6 +95,6 @@ Examples:<br>
 
 ---------------
 ## Thanks
-Thanks for using TModeration Bot. Feel free to create issues if you feel there is a real issue. Again, thanks for using TModeration Bot!
-**We always do the best thing to TMod. Bot and you as a Service - Henry**
+Thanks for using TModeration Bot. Feel free to create issues if you feel there is a real issue. Again, thanks for using TModeration Bot!<br>
+**We always do the best thing to TMod. Bot and you as a Service - Henry**<br>
 **Thanks for using, but abusing cannot be tolerance - Henry**
