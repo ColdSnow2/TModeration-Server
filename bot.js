@@ -1,4 +1,4 @@
- globalThis.tmoderation = () => {
+ globalThis.bot = () => {
   // Start of Bot.js
   // Credit: Henry133#2436
   // Founder: Henry133#2436
@@ -15,7 +15,6 @@
 
   // Start of TModeration Code
   // Level 2 exception (Highest exception, only try + catch can handle)
-   return
   try {
     // Strongly required packages
     const {

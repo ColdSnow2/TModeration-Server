@@ -1,2 +1,2 @@
 require("./bot.js")
-tmoderation()
+bot()
