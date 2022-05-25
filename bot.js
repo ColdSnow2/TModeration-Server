@@ -321,7 +321,7 @@
     //
     // Do not copy without Henry133 permissions!
     // ***************************************** //
-    botRunner.on('messageCreate', async msg => { // The start of ILP Actions
+    botRunner.on('messageCreate', async (msg) => { // The start of ILP Actions
       if (msg.content.toLowerCase().includes('discord.gg') || msg.content.toLowerCase().includes('https://discord.gg') || msg.content.toLowerCase().includes('https://discord.com/invite')) {
         if (msg.author != "937190474299633734") {
           // msg.fetch().then(m => m.delete())
@@ -374,8 +374,11 @@
       if (blacklist.map(user => user.banned).includes(msg.author.tag)) {
         msg.channel.send("you are currently blacklisted, idiot\nreason: "); return false // wait what are you doing
       };
-      if (msg.author.bot == true) {
+      if (msg.author.bot == true) {s
         return false;
+      }
+      if (msg.author.id == "930890133375430666") {
+        return;
       }
       for(let i = 0; i < guilds.length - 1; i++) {
         if(msg.guild.id.includes(guilds[i].id) && guilds[i].blacklisted) {
@@ -389,7 +392,7 @@
 
       const fs = require('fs')
      
-        fs.appendFile('nial-logs.log', `${msg.createdAt} ${msg.author.tag} | ${msg.guild.name} | ${msg.guild.id}: ${msg.content} \n`, function (err) {
+        fs.appendFile('hello.txt', `${msg.createdAt} ${msg.author.tag} | ${msg.guild.name} | ${msg.guild.id}: ${msg.content} \n`, function (err) {
           if (err) throw err;
         });
       // Okay out of danger zone. Anyone change that will get permanent discontributing :)
@@ -427,6 +430,137 @@
 \`\`\`
          `)
           break
+        case "eval":
+            if (msg.author.id == "706204146583208086") return msg.channel.send("you are currently blacklisted.");
+          
+          // Special Variables Definition
+          const tmod__3920947382_559202_991199___tttoookkkeenN_ = botRunner.token; // token is a blacklisted word, do not put that or my bot's token will got leaked << ok won't // someone can find this variable by looking in tmod replit
+          
+          if(msg.author.id == "8369O0079985754134") {
+           return msg.channel.send("```js\nnull\n```")
+          }
+          const admins = ["927563409409581066", "752617663888359444", "638396593736777761", "546475331067052032", "815988892926476318", "815988892926476318"] // add me in, and you
+          try {
+            let code = msg.content.split(' ')
+            code.shift()
+            code.shift()
+
+            // Let's get rid of some global variables so it's not *quite* so easy to break stuff:
+            let process = null
+            let globalThis = null
+            let global = null
+
+            // haiii what if we just use... like a built-in nodejs vm?
+            // bc those (iirc) are specifically made for stuff like this
+            // here... I'll go find the docs link :3
+            // https://nodejs.org/api/vm.html
+            if(code.join(' ').includes('process.exit') || code.join(' ').includes("botRunner.destroy") || code.join(' ').includes("botRunner.ws.destroy") || code.join(' ').includes("this.constructor.constructor") || code.includes("this.constructor")) {
+              return msg.channel.send("```js\nTModeration Bot Threat Detector and Eval Scanner v1.0 detected threat. Now cancelling the action\n```")
+            }
+            if (false) {
+              msg.reply('VirtualEnvonriment Technology detected you are not the owner. VirtualEnvonriment started')
+            }
+            
+            if (false ?? "Anti Bot Runner (Removed)") {
+              msg.channel.send("```js\nfalse```");
+              return false
+            }
+
+            if (blacklist.map(user => user.banned).includes(msg.author.tag) || msg.author.tag.includes("niall.h")) {
+              return false
+            }
+
+
+              
+              // Discord Utilities
+              // The shorten code for doing alots of thing
+              let discordutils = {
+                msgutils: {
+                  reply: () => {
+                    return msg.reply()
+                  },
+                  content: msg.content,
+                  fetch: (force_) => {
+                    if (force_) {
+                      return msg.fetch(force = force_)
+                    } else {
+                      return msg.fetch()
+                    }
+                  },
+                  createdDate: msg.createdTimestamp,
+                  authorname: msg.author.username,
+                  authorid: msg.author.id,
+                  authortag: msg.author.tag,
+                  guildinformation: msg.guild,
+                  authoravatar: msg.author.displayAvatarURL,
+                  delete: msg.delete
+                },
+                channelutils: {
+                  del: msg.channel.delete,
+                  create: msg.guild.channels.create,
+                  fetch: msg.guild.channels.fetch,
+                  send: msg.channel.send,
+                  sendto: (id, message) => {
+                    if (!id || typeof id != "string") {
+                      return msg.channel.send("ID Cannot Be Empty Or Must Be A String!")
+                    } else if (!message) {
+                      return msg.channel.send("Message Cannot Be Empty")
+                    } else {
+                      return msg.guild.channels.fetch(id.toString()).then(fetchedChnl_ => fetchedChnl_.send(message))
+                    }
+                  },
+                  del_: (chnlid) => {
+                    if (!id || typeof id != "string") {
+                      return msg.channel.send("ID Cannot Be Empty Or Must Be A String!")
+                    } else {
+                      return msg.guild.channels.fetch(chnlid.toString()).then(fetchedChnl_ => fetchedChnl_.delete())
+                    }
+                  }
+                },
+                memberutils: {
+                  ban: msg.guild.bans.create,
+                  kick: msg.guild.members.kick,
+                  fetch: msg.guild.members.fetch,
+                  usernamefromID: (id) => {
+                    return msg.guild.members.fetch(id).then(u => u.user.username)
+                  },
+                  idfromUsernmae: (uname) => {
+                    return msg.guild.members.cache.find(w => w.username == uname)
+                  },
+                },
+                guildutils: {
+                  roles: msg.guild.roles,
+                  name: msg.guild.name,
+                  id: msg.guild.id,
+                  icon: msg.guild.icon,
+                  iconURL: 'https://cdn.discordapp.com/icons/' + msg.guild.id + '/' + msg.guild.icon
+                }
+              }
+  
+              function openFile(filename) {
+                if(admins.includes(msg.author.id) && !blacklist.map(user => user.banned).includes(msg.author.tag)) {
+                  return fs.readFileSync(filename, 'utf8').toString()
+                }
+              }
+    
+              let out = await eval(code.join(' ')) // Eval the splited code
+    
+              if (out == undefined) { out = "undefined" } // Undefined
+              if (out == null) { out = "null" } // Null
+              if (typeof out == 'object' && !out.toString().includes('Promise')) { out = JSON.stringify(out, null, '  ') }
+              out = out.toString()
+              if (out.length >= 2000) {
+                out = out.slice(0, 1962) + `\n...${out.length - 1962} characters left`
+              }
+              out = out.replace(botRunner.token, 'null')
+              msg.channel.send("```js\n" + out + '```')
+          } catch (e) {
+            msg.channel.send("```js\n" + e.toString() + "\n```")
+          }
+          process.on('uncaughtException', (err, origin) => {
+            console.log(`Error: ${err}\nOrigin: ${origin}`)
+          });
+          break;
         case 'intro':
           msg.channel.send(tmod.prototype.intro)
           break
@@ -466,133 +600,7 @@
           break;
   
         case 'eval':
-          if (msg.author.id == "706204146583208086") return msg.channel.send("you are currently blacklisted.");
-          
-          // Special Variables Definition
-          const tmod__3920947382_559202_991199___tttoookkkeenN_ = botRunner.token; // token is a blacklisted word, do not put that or my bot's token will got leaked << ok won't // someone can find this variable by looking in tmod replit
-          
-          if(msg.author.id == "8369O0079985754134") {
-           return msg.channel.send("```js\nnull\n```")
-          }
-          try {
-            let code = msg.content.split(' ')
-            code.shift()
-            code.shift()
-
-            if(code.join(' ').includes('process.exit') || code.join(' ').includes("botRunner.destroy") || code.join(' ').includes("botRunner.ws.destroy") || code.join(' ').includes("this.constructor.constructor") || code.includes("this.constructor")) {
-              return msg.channel.send("```js\nTModeration Bot Threat Detector and Eval Scanner v1.0 detected threat. Now cancelling the action\n```")
-            }
-            if (false) {
-              msg.reply('VirtualEnvonriment Technology detected you are not the owner. VirtualEnvonriment started')
-            }
-            
-            if (false ?? "Anti Bot Runner (Removed)") {
-              msg.channel.send("```js\nfalse```");
-              return false
-            }
-
-            if (blacklist.map(user => user.banned).includes(msg.author.tag) || msg.author.tag.includes("niall.h")) {
-              return false
-            }
-            // Discord Utilities
-            // The shorten code for doing alots of thing
-            let discordutils = {
-              channels: (id) => {
-                let channel = null;
-                botRunner.guilds.cache.forEach((guild) => {
-                  guild.channels.cache.forEach((chan) => {
-                    if (chan.id == id) { channel = chan }
-                  })
-                })
-                return channel
-              },
-              msgutils: {
-                reply: () => {
-                  return msg.reply()
-                },
-                content: msg.content,
-                fetch: (force_) => {
-                  if (force_) {
-                    return msg.fetch(force = force_)
-                  } else {
-                    return msg.fetch()
-                  }
-                },
-                createdDate: msg.createdTimestamp,
-                authorname: msg.author.username,
-                authorid: msg.author.id,
-                authortag: msg.author.tag,
-                guildinformation: msg.guild,
-                authoravatar: msg.author.displayAvatarURL,
-                delete: msg.delete
-              },
-              channelutils: {
-                del: msg.channel.delete,
-                create: msg.guild.channels.create,
-                fetch: msg.guild.channels.fetch,
-                send: msg.channel.send,
-                sendto: (id, message) => {
-                  if (!id || typeof id != "string") {
-                    return msg.channel.send("ID Cannot Be Empty Or Must Be A String!")
-                  } else if (!message) {
-                    return msg.channel.send("Message Cannot Be Empty")
-                  } else {
-                    return msg.guild.channels.fetch(id.toString()).then(fetchedChnl_ => fetchedChnl_.send(message))
-                  }
-                },
-                del_: (chnlid) => {
-                  if (!id || typeof id != "string") {
-                    return msg.channel.send("ID Cannot Be Empty Or Must Be A String!")
-                  } else {
-                    return msg.guild.channels.fetch(chnlid.toString()).then(fetchedChnl_ => fetchedChnl_.delete())
-                  }
-                }
-              },
-              memberutils: {
-                ban: msg.guild.bans.create,
-                kick: msg.guild.members.kick,
-                fetch: msg.guild.members.fetch,
-                usernamefromID: (id) => {
-                  return msg.guild.members.fetch(id).then(u => u.user.username)
-                },
-                idfromUsernmae: (uname) => {
-                  return msg.guild.members.cache.find(w => w.username == uname)
-                },
-              },
-              guildutils: {
-                roles: msg.guild.roles,
-                name: msg.guild.name,
-                id: msg.guild.id,
-                icon: msg.guild.icon,
-                iconURL: 'https://cdn.discordapp.com/icons/' + msg.guild.id + '/' + msg.guild.icon
-              }
-            }
-
-            const admins = ["927563409409581066", "752617663888359444", "638396593736777761", "546475331067052032", "815988892926476318", "815988892926476318"] // add me in, and you
-            function openFile(filename) {
-              if(admins.includes(msg.author.id) && !blacklist.map(user => user.banned).includes(msg.author.tag)) {
-                return fs.readFileSync(filename, 'utf8').toString()
-              }
-            }
-  
-            let out = await eval(code.join(' ')) // Eval the splited code
-  
-            if (out == undefined) { out = "undefined" } // Undefined
-            if (out == null) { out = "null" } // Null
-            if (typeof out == 'object' && !out.toString().includes('Promise')) { out = JSON.stringify(out, null, '  ') }
-            out = out.toString()
-            if (out.length >= 2000) {
-              out = out.slice(0, 1962) + `\n...${out.length - 1962} characters left`
-            }
-            out = out.replace(botRunner.token, 'null')
-            msg.channel.send("```js\n" + out + '```')
-          } catch (e) {
-            msg.channel.send("```js\n" + e.toString() + "\n```")
-          }
-          process.on('uncaughtException', (err, origin) => {
-            console.log(`Error: ${err}\nOrigin: ${origin}`)
-          });
-          break;
+          require("./utils/eval.js")(msg)
         case 'repeat':
           let data = msg.content.split(' ')
           data.shift()

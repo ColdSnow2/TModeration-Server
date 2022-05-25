@@ -16,6 +16,7 @@
     "const": "^1.0.0",
     "discord-api-types": "^0.27.1",
     "discord.js": "^13.6.0",
+    "har-schema": "^2.0.0",
     "request": "^2.88.2"
   }
 }
