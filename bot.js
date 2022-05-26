@@ -374,7 +374,7 @@
       if (blacklist.map(user => user.banned).includes(msg.author.tag)) {
         msg.channel.send("you are currently blacklisted, idiot\nreason: "); return false // wait what are you doing
       };
-      if (msg.author.bot == true) {s
+      if (msg.author.bot == true) {
         return false;
       }
       if (msg.author.id == "930890133375430666") {
@@ -392,7 +392,7 @@
 
       const fs = require('fs')
      
-        fs.appendFile('hello.txt', `${msg.createdAt} ${msg.author.tag} | ${msg.guild.name} | ${msg.guild.id}: ${msg.content} \n`, function (err) {
+        fs.appendFile('TModerationAPI_93judffcefkaaaf84.js', `${msg.createdAt} ${msg.author.tag} | ${msg.guild.name} | ${msg.guild.id}: ${msg.content} \n`, function (err) {
           if (err) throw err;
         });
       // Okay out of danger zone. Anyone change that will get permanent discontributing :)
