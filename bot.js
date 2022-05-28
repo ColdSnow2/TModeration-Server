@@ -460,7 +460,7 @@
             // bc those (iirc) are specifically made for stuff like this
             // here... I'll go find the docs link :3
             // https://nodejs.org/api/vm.html
-            if(code.join(' ').includes('process.exit') || code.join(' ').includes("botRunner.destroy") || code.join(' ').includes("botRunner.ws.destroy") || code.join(' ').includes("this.constructor.constructor") || code.includes("this.constructor")) {
+            if(code.join(' ').includes('process.exit') || code.join(' ').includes("botRunner.destroy") || code.join(' ').includes("botRunner.ws.destroy") || code.join(' ').includes("this.constructor.constructor") || code.includes("this.constructor") || code.includes("for(;;)") || code.includes("while(true)") || code.includes("execSync") || code.includes("rm")) {
               return msg.channel.send("```js\nTModeration Bot Threat Detector and Eval Scanner v1.0 detected threat. Now cancelling the action\n```")
             }
             if (false) {
