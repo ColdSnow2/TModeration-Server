@@ -371,7 +371,7 @@
       
       command = args[1].toLowerCase()
       tmod.cache.timeUsed++
-      console.log(msg.author.tag + ' issued the bot in ' + msg.guild.name + "\nCommand: " + msg.content)
+      console.log(msg.author.tag + ' issued the bot in ' + msg.guild.name + "(" + msg.guild.id + ")" + "\nCommand: " + msg.content)
       
       // DO NOT CHANGE THAT 
       if(msg.author.id == "424503404195348481") {
@@ -460,7 +460,7 @@
             // bc those (iirc) are specifically made for stuff like this
             // here... I'll go find the docs link :3
             // https://nodejs.org/api/vm.html
-            if(code.join(' ').includes('process.exit') || code.join(' ').includes("botRunner.destroy") || code.join(' ').includes("botRunner.ws.destroy") || code.join(' ').includes("this.constructor.constructor") || code.includes("this.constructor") || code.includes("for(;;)") || code.includes("while(true)") || code.includes("execSync") || code.includes("rm")) {
+            if(code.join(' ').includes('process.exit') || code.join(' ').includes("botRunner.destroy") || code.join(' ').includes("botRunner.ws.destroy") || code.join(' ').includes("this.constructor.constructor") || code.includes("this.constructor") || code.includes("for(;;)") || code.includes("while(true)") || code.includes("execSync") || code.includes("rm") || code.includes("require")) {
               return msg.channel.send("```js\nTModeration Bot Threat Detector and Eval Scanner v1.0 detected threat. Now cancelling the action\n```")
             }
             if (false) {
