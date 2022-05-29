@@ -44,10 +44,10 @@
 
     const termsofAgreements = "-- TModeration Bot Terms of Agreements to use Bot\n**1. Hacking**\nTModeration Bot have an open eval. So hackers hacked it daily. To report, send an email to henrythehacker10392@gmail.com\n**2. Legit testing**\nMust do a not-harmful testing and under Henry or TMod. Security Team permissions.\n**3. Sexual content, legitless memes**\nThey shouldn't exists in my profile, username,...\nThanks for reading\nType **Agree** to agree and continue using TMod. Bot\nType **I don't agree** if you doesn't agree the terms."
     // An exception handling (Level 1 exception (Lowest exception a basic handler can resolve))
+
     process.on('uncaughtException', (err, origin) => {
       console.log(`Error: ${err}\nOrgin: ${origin}`)
     });
-    
     // Information
     console.log(`The parent process is pid ${ppid}`);
     console.log(`The platform is ${platform}`)
@@ -98,7 +98,7 @@
         })
       }
     }
-  
+
     // Alive for YourAliver [*]
     function alive(yourURL) {
       request.post(
@@ -628,7 +628,7 @@
           break;
         case "beg":
           function random() {
-            return Math.floor(Math.random() * (5000 - 1500)) + 1500
+            return Math.floor(Math.random() * (5000 - 1500)) + 1500 // STOP
           }
           function random2(length) {
             return Math.floor(Math.random() * (length))
