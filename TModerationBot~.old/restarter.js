@@ -1,0 +1,1 @@
+globalThis.restart = () => {console.log("Restarting...");botRunner.destroy(); require('./bot.js'); tmoderation()} // Smartest way

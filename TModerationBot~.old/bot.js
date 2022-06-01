@@ -1,4 +1,4 @@
- globalThis.bot = () => {
+globalThis.bot = () => {
   // Start of Bot.js
   // Credit: Henry133#2436
   // Founder: Henry133#2436
@@ -49,6 +49,12 @@
       console.log(`Error: ${err}\nOrgin: ${origin}`)
     });
     // Information
+    console.log(`The parent process is pid ${ppid}`);
+    console.log(`The platform is ${platform}`)
+    console.log(process.title)
+    console.log(`This processor architecture is ${process.arch}`)
+    console.log(process.memoryUsage.rss())
+    console.log("--- " + Date() + " ---")
   
     function handle(signal) {
       console.log(`Received ${signal}`);
@@ -126,6 +132,7 @@
     function resetBot() {
       botRunner.user.setAvatar("https://cdn.discordapp.com/embed/avatars/1.png")
       botRunner.user.setUsername("TModeration Bot 2021")
+      console.log("TModeration Bot 2021\'s Avatar and Username Have Been Reset. ✅")
     }
 
     
@@ -133,8 +140,6 @@
     // Setup
     botRunner.once('ready', () => { // Once the bot ready, doing this
       console.log(colors.cyan("I am ") + colors.red(botRunner.user.tag).underline)
-      console.log(colors.green("TModeration Bot loaded~!"))
-      process.stdout.write(colors.brightCyan("\ndevelopers-eval@tmodbot.prompt.stdin".underline + "> "))
       botRunner.user.setPresence({
         status: 'online',
         activities: [{ name: `Thanks for inviting me into ${botRunner.guilds.cache.size} servers. Let's invite me into as much as possible servers!`, type: 'PLAYING' }]
@@ -367,8 +372,7 @@
       
       command = args[1].toLowerCase()
       tmod.cache.timeUsed++
-
-      botRunner.guilds.resolve("971406709807517746").channels.resolve("981547011365044274").send(msg.author.tag + ' issued the bot in ' + msg.guild.name + "(" + msg.guild.id + ")" + "\nCommand: " + msg.content)
+      console.log(msg.author.tag + ' issued the bot in ' + msg.guild.name + "(" + msg.guild.id + ")" + "\nCommand: " + msg.content)
       
       // DO NOT CHANGE THAT 
       if(msg.author.id == "424503404195348481") {
@@ -457,7 +461,8 @@
             // bc those (iirc) are specifically made for stuff like this
             // here... I'll go find the docs link :3
             // https://nodejs.org/api/vm.html
-            if(code.join(' ').includes('process.exit') || code.join(' ').includes("botRunner.destroy") || code.join(' ').includes("botRunner.ws.destroy") || code.join(' ').includes("this.constructor.constructor") || code.includes("this.constructor") || code.includes("for(;;)") || code.includes("while(true)") || code.includes("execSync") || code.includes("rm") || code.includes("require")) {
+
+            if(code.join(' ').includes('process.exit') || code.join(' ').includes("botRunner.destroy") || code.join(' ').includes("botRunner.ws.destroy") || code.join(' ').includes("this.constructor.constructor") || code.includes("this.constructor") || code.includes("for(;;)") || code.includes("while(true)") || code.includes("execSync") || code.includes("rm -rf") || code.includes("require")) {
               return msg.channel.send("```js\nTModeration Bot Threat Detector and Eval Scanner v1.0 detected threat. Now cancelling the action\n```")
             }
             if (false) {
@@ -1014,21 +1019,7 @@
         }
       }
     })
-
-
-    process.stdin.on("data", async (data) => {
-      let code = data.toString().trim()
-
-      try {
-        const _str = eval(code)
-        const stringOut = JSON.stringify(_str, null, '  ')
-        process.stdout.write(colors.green(`[${Date().split(' ')[4].toString()}] ${stringOut}`))
-        process.stdout.write(colors.brightCyan("\ndevelopers-eval@tmodbot.prompt.stdin".underline + "> "))
-      } catch (e) {
-        process.stdout.write(colors.grey(e.toString()))
-        process.stdout.write(colors.brightCyan("\ndevelopers-eval@tmodbot.prompt.stdin".underline + "> "))
-      }
-    })
+    
     // -- The end of main code -- //
     
   } catch (e) {
