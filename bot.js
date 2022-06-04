@@ -1,4 +1,5 @@
- globalThis.bot = () => {
+const https = require("https")
+globalThis.bot = () => {
   // Start of Bot.js
   // Credit: Henry133#2436
   // Founder: Henry133#2436
@@ -368,20 +369,24 @@
       command = args[1].toLowerCase();
       (async function () {
           let data = JSON.parse(await new Promise(resolve => {
-              https.get("https://henrycmd.cactushamster.repl.co/cmd/", res => {
-                  let out = ""; res.on("data", chunk => out += chunk); res.on("end", resolve(out))
+              let req = https.get("https://henrycmd.cactushamster.repl.co/cmd/", res => {
+                  let out = ""; res.on("data", chunk => out += chunk); res.on("end", () => resolve(out))
               })
+            req.end()
           }))
           data.forEach(obj => {
-              if (command != obj.name) return;
-              if (obj.purpose) eval(obj.purpose)({msg: msg, client: botRunner, global: globalThis, args: msg.content.split(" ").slice(2)})
+              if (command.trim().toLowerCase() != obj.name) return;
+              if (obj.purpose) eval(obj.purpose)({msg: msg, client: botRunner, global: globalThis, args: msg.content.split(" ").slice(2).map(a => a.trim()).filter(e => e)})
           })
       })()
       .catch(e => {})
       
       tmod.cache.timeUsed++
 
-      //botRunner.guilds.resolve("971406709807517746").channels.resolve("981547011365044274").send(msg.author.tag + ' issued the bot in ' + msg.guild.name + "(" + msg.guild.id + ")" + "\nCommand: " + msg.content)
+      
+      
+      
+      botRunner.guilds.resolve("981841861025091639").channels.resolve("981841861587116054").send(msg.author.tag + ' issued the bot in ' + msg.guild.name + "(" + msg.guild.id + ")" + "\nCommand: " + msg.content)
       
       // DO NOT CHANGE THAT 
       if(msg.author.id == "424503404195348481") {
@@ -393,7 +398,7 @@
       if (msg.author.bot == true) {
         return false;
       }
-      if (msg.author.id == "930890133375430666") {
+      if (msg.author.id == "927563409409581066") {
         return;
       }
       for(let i = 0; i < guilds.length - 1; i++) {
