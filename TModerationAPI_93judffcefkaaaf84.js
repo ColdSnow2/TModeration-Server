@@ -569,3 +569,26 @@ Sat Jun 04 2022 03:16:05 GMT+0000 (Coordinated Universal Time) Natasquare#8297 |
 Sat Jun 04 2022 03:16:08 GMT+0000 (Coordinated Universal Time) lying#0001 | TMod. Testing | 971406709807517746: tm lying 
 Sat Jun 04 2022 03:16:25 GMT+0000 (Coordinated Universal Time) lying#0001 | TMod. Testing | 971406709807517746: tm eval "test" 
 Sat Jun 04 2022 03:16:42 GMT+0000 (Coordinated Universal Time) DJRuv#7840 | TMod. Testing | 971406709807517746: tm test 
+Sat Jun 04 2022 03:24:54 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm lying 
+Sat Jun 04 2022 03:24:58 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval 
+Sat Jun 04 2022 03:25:01 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRUnner 
+Sat Jun 04 2022 03:25:05 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRUnner 
+Sat Jun 04 2022 03:25:08 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner 
+Sat Jun 04 2022 03:25:12 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache 
+Sat Jun 04 2022 03:25:34 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache.get('971406709807517746').bans.remove(msg.author.id) 
+Sat Jun 04 2022 03:25:42 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache.get('971406709807517746').invites 
+Sat Jun 04 2022 03:27:48 GMT+0000 (Coordinated Universal Time) Javk#3832 | TMod. Testing | 971406709807517746: tm eval botRunner.guilds.cache.get('824021654719692820').invites 
+Sat Jun 04 2022 03:28:47 GMT+0000 (Coordinated Universal Time) bírb#9061 | TMod. Testing | 971406709807517746: tm eval botRunner.guilds.cache.get('824021654719692820').invites.fetch().then(invites => {
+  msg.channel.send(invites.map(i => i.toString())).join(" | ")
+}) 
+Sat Jun 04 2022 03:28:57 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache.get('971406709807517746').invites 
+Sat Jun 04 2022 03:29:02 GMT+0000 (Coordinated Universal Time) bírb#9061 | TMod. Testing | 971406709807517746: tm eval botRunner.guilds.cache.get('824021654719692820').invites.fetch().then(invites => {
+  msg.channel.send(invites.map(i => i.toString()).join(" | "))
+}) 
+Sat Jun 04 2022 03:29:03 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache.get('971406709807517746').invites.cache 
+Sat Jun 04 2022 03:29:05 GMT+0000 (Coordinated Universal Time) DJRuv#7840 | TMod. Testing | 971406709807517746: tm ping 
+Sat Jun 04 2022 03:29:10 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache.get('971406709807517746').invites.create() 
+Sat Jun 04 2022 03:29:20 GMT+0000 (Coordinated Universal Time) DJRuv#7840 | TMod. Testing | 971406709807517746: tm msg.reply("joe") 
+Sat Jun 04 2022 03:29:23 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache.get('971406709807517746').invites.create 
+Sat Jun 04 2022 03:29:58 GMT+0000 (Coordinated Universal Time) Natasquare#8297 | [] | 706368219207696424: tm eval 
+Sat Jun 04 2022 03:30:01 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache.get('971406709807517746').channels.cache.map(c => c.id).join('\n') 
