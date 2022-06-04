@@ -630,3 +630,9 @@ Sat Jun 04 2022 03:37:50 GMT+0000 (Coordinated Universal Time) Natasquare#8297 |
         }]
     });
 }); 
+Sat Jun 04 2022 03:41:06 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing | 971406709807517746: tm eval msg.client.logout 
+Sat Jun 04 2022 03:41:08 GMT+0000 (Coordinated Universal Time) bírb#9061 | TMod. Testing | 971406709807517746: tm eval msg.client.destroy() 
+Sat Jun 04 2022 03:41:50 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing | 971406709807517746: tm lying 
+Sat Jun 04 2022 03:42:18 GMT+0000 (Coordinated Universal Time) bírb#9061 | TMod. Testing | 971406709807517746: tm lying 
+Sat Jun 04 2022 03:42:27 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing | 971406709807517746: tm lying 
+Sat Jun 04 2022 03:42:27 GMT+0000 (Coordinated Universal Time) bírb#9061 | TMod. Testing | 971406709807517746: tm mandel 
