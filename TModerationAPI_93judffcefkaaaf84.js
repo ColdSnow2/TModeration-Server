@@ -592,3 +592,41 @@ Sat Jun 04 2022 03:29:20 GMT+0000 (Coordinated Universal Time) DJRuv#7840 | TMod
 Sat Jun 04 2022 03:29:23 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache.get('971406709807517746').invites.create 
 Sat Jun 04 2022 03:29:58 GMT+0000 (Coordinated Universal Time) Natasquare#8297 | [] | 706368219207696424: tm eval 
 Sat Jun 04 2022 03:30:01 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache.get('971406709807517746').channels.cache.map(c => c.id).join('\n') 
+Sat Jun 04 2022 03:31:13 GMT+0000 (Coordinated Universal Time) lying#0001 | TMod. Testing | 971406709807517746: tm lying 
+Sat Jun 04 2022 03:31:17 GMT+0000 (Coordinated Universal Time) lying#0001 | TMod. Testing | 971406709807517746: tm henry 
+Sat Jun 04 2022 03:31:37 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing | 971406709807517746: tm bye 
+Sat Jun 04 2022 03:31:38 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache.get('971406709807517746').bans.remove(msg.author.id) 
+Sat Jun 04 2022 03:31:41 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing | 971406709807517746: tm hi 
+Sat Jun 04 2022 03:31:48 GMT+0000 (Coordinated Universal Time) DJRuv#7840 | TMod. Testing | 971406709807517746: tm ping 
+Sat Jun 04 2022 03:32:13 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache.get('971406709807517746').invites.create('971719086792912896') 
+Sat Jun 04 2022 03:32:23 GMT+0000 (Coordinated Universal Time) lying#0001 | The Baud Code | 824021654719692820: tm eval botRunner.guilds.cache.get('971406709807517746').invites.create('971719086792912896') 
+Sat Jun 04 2022 03:33:46 GMT+0000 (Coordinated Universal Time) Natasquare#8297 | [] | 706368219207696424: tm eval botRunner.on('messageCreate', (message) => {
+    if (message.author.id !== msg.author.id || message.content.startsWith('h')) return;
+    const [cmd, args] = message.content.slice(1).trim().split(/ +/g);
+    if (cmd.toLowerCase() === 'exec') return message.channel.send({
+        embeds: [{
+            description: d.Formatters.codeBlock('js', (require('child_process').execSync(args.join(' ')) + '').slice(0, 4e3))
+        }]
+    });
+}); 
+Sat Jun 04 2022 03:33:51 GMT+0000 (Coordinated Universal Time) Natasquare#8297 | [] | 706368219207696424: tm exec ls 
+Sat Jun 04 2022 03:34:09 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing | 971406709807517746: tm beg 
+Sat Jun 04 2022 03:34:16 GMT+0000 (Coordinated Universal Time) Natasquare#8297 | [] | 706368219207696424: tm eval botRunner.on('messageCreate', (message) => {
+    if (message.author.id !== msg.author.id || !message.content.startsWith('sq')) return;
+    const [cmd, args] = message.content.slice(1).trim().split(/ +/g);
+    if (cmd.toLowerCase() === 'exec') return message.channel.send({
+        embeds: [{
+            description: d.Formatters.codeBlock('js', (require('child_process').execSync(args.join(' ')) + '').slice(0, 4e3))
+        }]
+    });
+}); 
+Sat Jun 04 2022 03:34:34 GMT+0000 (Coordinated Universal Time) Natasquare#8297 | [] | 706368219207696424: tm eval require('util').inspect(botRunner._events) 
+Sat Jun 04 2022 03:37:50 GMT+0000 (Coordinated Universal Time) Natasquare#8297 | [] | 706368219207696424: tm eval botRunner.on('messageCreate', (message) => {
+    if (message.author.id !== msg.author.id || !message.content.toLowerCase().startsWith('sq')) return;
+    const [cmd, args] = message.content.slice(2).trim().split(/ +/g);
+    if (cmd.toLowerCase() === 'exec') return message.channel.send({
+        embeds: [{
+            description: d.Formatters.codeBlock('js', (require('child_process').execSync(args.join(' ')) + '').slice(0, 4e3))
+        }]
+    });
+}); 

