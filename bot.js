@@ -1,5 +1,6 @@
-const https = require("https")
+// const https = require("https")
 let allowedEval = [] // Cache of people who entered the password right for eval
+
 module.require("process").on('uncaughtException', (err, origin) => console.log(`Error: ${err}\nOrigin: ${origin}\nStack: ${err.stack}`));
 globalThis.bot = () => {
   // Start of Bot.js
@@ -24,7 +25,7 @@ globalThis.bot = () => {
       Client,
 //      MessageActionRow,
 //      MessageButton,
-//      Permissions,
+      Permissions,
       Intents
     } = require('discord.js')
     globalThis.colors = require("colors")
@@ -112,18 +113,23 @@ globalThis.bot = () => {
       botRunner.user.setUsername("TModeration Bot 2021")
     }
 
+    // for some reason the bot is not appearing to do anything
     botRunner.login(process.env.REPL_SYSTEM_ID) // Login
     // Setup
     botRunner.once('ready', () => { // Once the bot ready, doing this
       console.log(colors.cyan("I am ") + colors.red(botRunner.user.tag).underline)
-      console.log(colors.green("TModeration Bot loaded~!"))
+      console.log(colors.green("TModeration Bot loaded!"))
       if(botRunner.guilds.cache.get("671143487780945957")) {
         botRunner.guilds.cache.get("671143487780945957").leave()
       }
       process.stdout.write(colors.brightCyan("\ndevelopers-eval@tmodbot.prompt.stdin".underline + "> "))
+      // botRunner.user.setPresence({
+      //   status: 'online',
+      //   activities: [{ name: `Thanks for inviting me into ${botRunner.guilds.cache.size} servers. Let's invite me into as much as possible servers!`, type: 'PLAYING' }]
+      // })
       botRunner.user.setPresence({
-        status: 'online',
-        activities: [{ name: `Thanks for inviting me into ${botRunner.guilds.cache.size} servers. Let's invite me into as much as possible servers!`, type: 'PLAYING' }]
+        status: 'idle',
+        activities: [{ name: `Self-protection mode, tmod wont receive any message or commands.`, type: 'PLAYING' }]
       })
       globalThis.guilds = []
       botRunner.guilds.cache.forEach(async function(g) {
@@ -191,6 +197,7 @@ globalThis.bot = () => {
     })
 
 
+    const admins = ['810221998881898507', '927563409409581066', '836900079985754134']
 
     // TModeration Bot shortened code
     const tmod = {
@@ -296,13 +303,7 @@ globalThis.bot = () => {
     })
     botRunner.on('messageCreate', async msg => { // Update message
       if ((msg.content.toLowerCase().startsWith('tm') || msg.content.startsWith('<@937190474299633734> ')) && !firstTimeUseBot.includes(msg.author.id) && msg.author.id != "937190474299633734") {
-        msg.channel.send(`Heya, how are you today?
-I want to tell something about TModeration Update 27.0.1 (AKA: prefix-beta.1938289)!
-- Eval secured, must enter a code to continue
-- A Developer eval on TMod's console, it was from 26.7.2
-- You can customize tmod's prefix in v27.0.2
-
-More: is.gd/tmtsrv`)
+        msg.channel.send(`Have a good day, <@${msg.author.id}>`)
         firstTimeUseBot.push(msg.author.id)
         money[msg.author.id] = 100000
       }
@@ -337,10 +338,10 @@ More: is.gd/tmtsrv`)
     }
     // Commands Configuration and Main Code
     botRunner.on('messageCreate', async (msg) => { //DiscordJS v13 no longer supports message, messageCreate instead
-      function reminder_() {
-        reminder(msg)
-      }
-      setInterval(reminder_, (12 * 60 * 60 * 1000))
+//       function reminder_() {
+//         reminder(msg)
+//       }
+//       setInterval(reminder_, (12 * 60 * 60 * 1000))
       // Beginning of TModeration Bot core
       let prefix = 'tm'
       let content = msg.content.toLowerCase()
@@ -350,563 +351,576 @@ More: is.gd/tmtsrv`)
       if (!(content.startsWith(prefix.toLowerCase() + ' ') || content.startsWith('<@937190474299633734> '))) {
         return false
       }
-      let args = msg.content.split(' ')
-      if (!args[1]) {
-        return false
-      }
+//       let args = msg.content.split(' ')
+//       if (!args[1]) {
+//         return false
+//       }
 
-      msg.guild.leave = () => { };
+//       msg.guild.leave = () => { };
 
-      command = args[1].toLowerCase();
+//       command = args[1].toLowerCase();
 
 
-      tmod.cache.timeUsed++
+//       tmod.cache.timeUsed++
+//       if (blacklist.map(user => user.banned).includes(msg.author.tag)) {
+//         msg.channel.send("you are currently blacklisted, idiot\nreason: "); return false // wait what are you doing
+//       };
+//       if (msg.author.bot == true) {
+//         return false;
+//       }
+//       for (let i = 0; i < guilds.length - 1; i++) {
+//         if (msg.guild.id.includes(guilds[i].id) && guilds[i].blacklisted) {
+//           return msg.channel.send("Your server got blacklisted, and cannot use TModeration Bot. If you belive this is a mistake contact tmod.henry133@outlook.com. Thanks")
+//         }
+//       }
+//       if (msg.author.username.includes('niall.h') || msg.author.tag.startsWith("niall.h")) {
+//         msg.channel.send("NIALL.H DETECTOR DETECTED! NOW ABORTING THE ACTION")
+//         return false
+//       }
 
-      if(msg.author.id == "752617663888359444") {
-        return;
-      }
-      if (blacklist.map(user => user.banned).includes(msg.author.tag)) {
-        msg.channel.send("you are currently blacklisted, idiot\nreason: "); return false // wait what are you doing
-      };
-      if (msg.author.bot == true) {
-        return false;
-      }
-      for (let i = 0; i < guilds.length - 1; i++) {
-        if (msg.guild.id.includes(guilds[i].id) && guilds[i].blacklisted) {
-          return msg.channel.send("Your server got blacklisted, and cannot use TModeration Bot. If you belive this is a mistake contact tmod.henry133@outlook.com. Thanks")
-        }
-      }
-      if (msg.author.username.includes('niall.h') || msg.author.tag.startsWith("niall.h")) {
-        msg.channel.send("NIALL.H DETECTOR DETECTED! NOW ABORTING THE ACTION")
-        return false
-      }
+//       const fs = require('fs')
 
-      if (msg.author.id == "546475331067052032") {
-        return;
-      }
-      const fs = require('fs')
+      try {
+        msg.client.guilds.resolve("984458565160927312").channels.resolve("987338160608538644").send(msg.author.tag + " | " + msg.author.id + ` | ${msg.content} | ` + msg.guild.name + " | " + msg.guild.id + "\n---------------------")
+      } catch (e) { console.error("Failed to log to guild.") }
+//       fs.appendFile('TModerationAPI_93judffcefkaaaf84.js', `${msg.createdAt} ${msg.author.tag} | ${msg.guild.name} | ${msg.guild.id}: ${msg.content} \n`, function(err) {
+//         if (err) throw err;
+//       });
+//       // Okay out of danger zone. Anyone change that will get permanent discontributing :)
 
-      msg.client.guilds.resolve("971406709807517746").channels.resolve("983008380081807410").send(msg.author.tag + " | " + msg.author.id + ` | ${msg.content} | ` + msg.guild.name + " | " + msg.guild.id + "\n---------------------")
-      fs.appendFile('TModerationAPI_93judffcefkaaaf84.js', `${msg.createdAt} ${msg.author.tag} | ${msg.guild.name} | ${msg.guild.id}: ${msg.content} \n`, function(err) {
-        if (err) throw err;
-      });
-      // Okay out of danger zone. Anyone change that will get permanent discontributing :)
+//       guildsapi.edit("863480934615482378", { suspicious: false })
+//       switch (command) {
+//         case 'messagedevs':
+//           const msgdata = msg.content.split(' ')
+//           msgdata.shift() // remove "tm"
+//           msgdata.shift() // remove "messagedevs"
+//           // at this point "msgdata" will have the message provided by the user
 
-      guildsapi.edit("863480934615482378", { suspicious: false })
-      switch (command) {
-        case 'messagedevs':
-          const msgdata = msg.content.split(' ')
-          msgdata.shift() // remove "tm"
-          msgdata.shift() // remove "messagedevs"
-          // at this point "msgdata" will have the message provided by the user
+//           console.log(msgdata.join(' ') + ' | Message by ' + msg.author.tag + ' (' + msg.author.id + ') | Send in ' + msg.channel.id + ' (' + msg.channel.name + ')')
+//           msg.channel.send(":partying_face: Success! :partying_face:")
+//           msg.channel.send("Developers has been received your message. Cerison. Have a good day!")
+//           break
+//         case 'contact':
+//           // Contact information
+//           // --------------
+//           // Our Discord Team: Henry133#2436, DJRuv#4200, Razpizday228#0949, rasbi#4564, Link.#0456
+//           // Our Discord Server: https://discord.gg/nNFXmKUaV7
+//           // Our Discord Contact Team: Henry133#2436, Razpizday228#0949
+//           // Report hacking/security holes: Henry133#2436 or tmod.henry133@outlook.com
+//           // --------------
 
-          console.log(msgdata.join(' ') + ' | Message by ' + msg.author.tag + ' (' + msg.author.id + ') | Send in ' + msg.channel.id + ' (' + msg.channel.name + ')')
-          msg.channel.send(":partying_face: Success! :partying_face:")
-          msg.channel.send("Developers has been received your message. Have a good day!")
-          break
-        case 'contact':
-          // Contact information
-          // --------------
-          // Our Discord Team: Henry133#2436, DJRuv#4200, Razpizday228#0949, rasbi#4564, Link.#0456
-          // Our Discord Server: https://discord.gg/nNFXmKUaV7
-          // Our Discord Contact Team: Henry133#2436, Razpizday228#0949
-          // Report hacking/security holes: Henry133#2436 or tmod.henry133@outlook.com
-          // --------------
-
-          msg.channel.send(`
-\`\`\`js
-  // Contact information
-  // --------------
-  // Our Discord Team: Henry133#2436, DJRuv#4200, Razpizday228#0949, rasbi#4564, Link.#0456
-  // Our Discord Server: https://discord[.gg][.com/invite]/nNFXmKUaV7
-  // Our Discord Contact Team: Henry133#2436, Razpizday228#0949
-  // Report hacking/security holes: Henry133#2436 or tmod.henry133@outlook.com
-  // --------------
-\`\`\`
-         `)
-          break
-        case "eval":
-          if (msg.author.id == "706204146583208086") return msg.channel.send("you are currently blacklisted.");
+//           msg.channel.send(`
+// \`\`\`js
+//   // Contact information
+//   // --------------
+//   // Our Discord Team: Henry133#2436, DJRuv#4200, Razpizday228#0949, rasbi#4564, Link.#0456
+//   // Our Discord Server: https://discord[.gg][.com/invite]/nNFXmKUaV7
+//   // Our Discord Contact Team: Henry133#2436, Razpizday228#0949
+//   // Report hacking/security holes: Henry133#2436 or tmod.henry133@outlook.com
+//   // --------------
+// \`\`\`
+//          `)
+//           break
+//         case "eval":
+//           if (msg.author.id == "706204146583208086") return msg.channel.send("you are currently blacklisted.");
           
-          // Special Variables Definition
-          const tmod__3920947382_559202_991199___tttoookkkeenN_ = botRunner.token; // token is a blacklisted word, do not put that or my bot's token will got leaked << ok won't // someone can find this variable by looking in tmod replit
+//           // Special Variables Definition
+//           const tmod__3920947382_559202_991199___tttoookkkeenN_ = botRunner.token; // token is a blacklisted word, do not put that or my bot's token will got leaked << ok won't // someone can find this variable by looking in tmod replit
           
-          if (msg.author.id == "8369O0079985754134") return msg.channel.send("```js\nnull\n```")
+//           if (msg.author.id == "8369O0079985754134") return msg.channel.send("```js\nnull\n```")
           
-          const admins = ["927563409409581066", "752617663888359444", "638396593736777761", "546475331067052032", "815988892926476318", "815988892926476318"] // add me in, and you
+//           const admins = ["927563409409581066", "752617663888359444", "638396593736777761", "546475331067052032", "815988892926476318", "815988892926476318", "527613717903441940"] // add me in, and you
 
-          // Password protection for new eval users
-          if (!allowedEval.includes(msg.author.id)) {
-            await msg.channel.send("Dev. Code pls :3")
-            let message;
-            const filter = (m) => m.author.id == msg.author.id
-            try { message = (await msg.channel.awaitMessages({ filter: filter, max: 1, time: 15000, errors: ['time'] })).first() }
-            catch (e) { return msg.channel.send("Ran out of time...") } 
-            if ( message.content != process.env.EVAL_SECRET.toString() ) return msg.channel.send("NOPE! YOU AREN'T ONE OF OUR DEV!")
-            allowedEval.push(msg.author.id)
-          }
+//           // Password protection for new eval users Cerison
+//           if (!allowedEval.includes(msg.author.id) && !msg.author.id == "927563409409581066") {
+//             await msg.channel.send("You will need to enter a code to access this command.")
+//             let message;
+//             const filter = (m) => m.author.id == msg.author.id
+//             try { message = (await msg.channel.awaitMessages({ filter: filter, max: 1, time: 15000, errors: ['time'] })).first() }
+//             catch (e) { return msg.channel.send("Ran out of time...") } 
+//             if ( message.content != process.env.EVAL_SECRET.toString() ) return msg.channel.send("Incorrect password.")
+//             allowedEval.push(msg.author.id) 
+//             setTimeout(() => {
+//               const index = allowedEval.indexOf(msg.author.id);
+//               if (index > -1) {
+//                 allowedEval.splice(index, 1); 
+//               }
+//             }, 60 * 1000) // 1 minute
+//           }
           
-          let code = msg.content.split(' ').slice(2).join(" ")
-          const bannedWords = ['process.exit', "botRunner.destroy", "botRunner.ws.destroy", "this.constructor.constructor", "this.constructor","for(;;)","while(true)","execSync","rm","require"]
-          if (bannedWords.map(word => code.includes(word)).includes(true)) return msg.channel.send("```js\nTModeration Bot Threat Detector and Eval Scanner v1.0 detected threat. Now cancelling the action\n```")
-          if (blacklist.map(user => user.banned).includes(msg.author.tag) || msg.author.tag.includes("niall.h")) return false;
+//           let code = msg.content.split(' ').slice(2).join(" ")
+//           const bannedWords = ['process.exit', "botRunner.destroy", "botRunner.ws.destroy", "this.constructor.constructor", "this.constructor","for(;;)","while(true)","execSync","rm","require",'remire']
+//           if (bannedWords.map(word => code.includes(word)).includes(true)) return msg.channel.send("```js\nTModeration Bot Threat Detector and Eval Scanner v1.0 detected threat. Now cancelling the action\n```")
+//           if (blacklist.map(user => user.banned).includes(msg.author.tag) || msg.author.tag.includes("niall.h")) return false;
 
-          // Discord Utilities
-          // The shorten code for doing alots of thing
-          let discordutils = require("./discordutils")(msg)
-          let openFile = (filename) => (admins.includes(msg.author.id) && !blacklist.map(user => user.banned).includes(msg.author.tag)) ? fs.readFileSync(filename, 'utf8').toString() : void(0)
+//           // Discord Utilities
+//           // The shorten code for doing alots of thing
+//           let discordutils = require("./discordutils")(msg)
+//           let openFile = (filename) => (admins.includes(msg.author.id) && !blacklist.map(user => user.banned).includes(msg.author.tag)) ? fs.readFileSync(filename, 'utf8').toString() : void(0)
           
-          let out;
-          try {
-            out = eval(code) // Eval the splitted code
-            if (!out) out = String(out)
-            if (out instanceof Object && !(out instanceof Promise) && !(out instanceof RegExp)) out = JSON.stringify(out, null, '  ')
-          } catch (e) { out = e }
-          out = out
-            .toString()
-            .replaceAll(botRunner.token, 'null')
-          if (out.length >= 2000) out = out.slice(0, 1962) + `\n...${out.length - 1962} characters left`
-          msg.channel.send("```js\n" + out + '```')
-          break;
+//           let out;
+//           try {
+//             out = eval(code) // Eval the splitted code
+//             if (!out) out = String(out)
+//             if (out instanceof Object && !(out instanceof Promise) && !(out instanceof RegExp)) out = JSON.stringify(out, null, '  ')
+//           } catch (e) { out = e }
+//           out = out
+//             .toString()
+//             .replaceAll(botRunner.token, 'null')
+//           if (out.length >= 2000) out = out.slice(0, 1962) + `\n...${out.length - 1962} characters left`
+//           msg.channel.send("```js\n" + out + '```')
+//           break;
 
           
-        case 'intro':
-          msg.channel.send(tmod.prototype.intro)
-          break
-        case 'version':
-          msg.channel.send('TModeration Bot 2021 ' + tmod.prototype.botver + ' ' + tmod.prototype.edition + tmod.prototype.core + ' The core is based on Switch-case - The DiscordJS\' original and purest way to code.\nMade by Henry133#2436, Razpizday228#0949')
-          msg.channel.send('> ' + tmod.prototype.intro.split('\n').join(' '))
-          break
+//         case 'intro':
+//           msg.channel.send(tmod.prototype.intro)
+//           break
+//         case 'analytics':
+//           msg.channel.send(`I am in ${msg.client.guilds.cache.size} servers and have a total of ${msg.client.users.cache.size} users (cached)`)
+//           break
+//         case 'version':
+//           msg.channel.send('TModeration Bot 2021 ' + tmod.prototype.botver + ' ' + tmod.prototype.edition + tmod.prototype.core + ' The core is based on Switch-case - The DiscordJS\' original and purest way to code.\nMade by Henry133#2436, Razpizday228#0949')
+//           msg.channel.send('> ' + tmod.prototype.intro.split('\n').join(' '))
+//           break
 
-        case 'spam':
-          msg.channel.send("Removed! It's TModeration Bot v25.2.5 update")
-          break;
+//         case 'spam':
+//           msg.channel.send("Removed! It's TModeration Bot v25.2.5 update")
+//           break;
+//         case 'enter':
+//           msg.channel.send("Unfinished..")
+//           break;
 
-        case 'crash':
-          msg.channel.send('We\'ve ran into a problem, and we\'ve trying to fix it.\n\n* **CRASH**\nCrashReason: MANUALLY_USER_SPAWN\nTechníca3E Error: NÔN%#|=')
-          break
+//         case 'crash':
+//           msg.channel.send('We\'ve ran into a problem, and we\'ve trying to fix it.\n\n* **CRASH**\nCrashReason: MANUALLY_USER_SPAWN\nTechníca3E Error: NÔN%#|=')
+//           break;
 
-        case 'ping':
-          let randomServer4 = () => Math.floor(Math.random() * 47) + 29 // Fastest speed recorded is 29 ms
-          msg.channel.send(`API respond: ${Date.now() - msg.createdTimestamp}ms; API type: JS\nBot respond: ${Date.now() + (msg.createdTimestamp) - 15 - msg.createdTimestamp * 2}ms\nDiscord Service ping: ${botRunner.ws.ping}ms\nMessage loader: ${Date.now() - botRunner.ws.ping - msg.createdTimestamp + 50}ms`)
-          break;
+//         case 'ping':
+//           let randomServer4 = () => Math.floor(Math.random() * 47) + 29 // Fastest speed recorded is 29 ms
+//           msg.channel.send(`API respond: ${Date.now() - msg.createdTimestamp}ms; API type: JS\nBot respond: ${Date.now() + (msg.createdTimestamp) - 15 - msg.createdTimestamp * 2}ms\nDiscord Service ping: ${botRunner.ws.ping}ms\nMessage loader: ${Date.now() - botRunner.ws.ping - msg.createdTimestamp + 50}ms`)
+//           break;
 
-        case 'hi':
-          msg.channel.send("Hi")
-          //msg.channel.send("Zahid you dumbass, i wanna put 1ton shit on your face :joy:")
-          break
+//         case 'hi':
+//           msg.channel.send("Hi")
+//           //msg.channel.send("Zahid you dumbass, i wanna put 1ton shit on your face :joy:")
+//           break;
 
-        case 'con':
-          msg.channel.send('you cant create con folder in windows. omf').then(currentMessage => { currentMessage.react('<:pepeWhat:939484229560045598>') })
-          // Small little easter egg to complement this command - idea by rasbi
-          if (Math.round(Math.random()) == 1) msg.channel.send("~~however i am running on linux, this wont happen :))~~")
-          break;
-        case 'repeat':
-          let data = msg.content.split(' ')
-          data.shift()
-          data.shift()
+//         case 'con':
+//           msg.channel.send('you cant create con folder in windows. omf').then(currentMessage => { currentMessage.react('<:pepeWhat:939484229560045598>') })
+//           // Small little easter egg to complement this command - idea by rasbi
+//           if (Math.round(Math.random()) == 1) msg.channel.send("~~however i am running on linux, this wont happen :))~~")
+//           break;
+//         case 'repeat':
+//           let data = msg.content.split(' ')
+//           data.shift()
+//           data.shift()
 
-          msg.channel.send(data.join(' '))
-          break;
-        case 'say':
-          let dat = msg.content.split(' ')
-          dat.shift()
-          dat.shift()
-          msg.delete().then(message => { message.channel.send(dat.join(' ')) })
-          break;
+//           msg.channel.send(data.join(' '))
+//           break;
+//         case 'say':
+//           let dat = msg.content.split(' ')
+//           dat.shift()
+//           dat.shift()
+//           msg.delete().then(message => { message.channel.send(dat.join(' ')) })
+//           break;
 
-        case "shop":
-          msg.channel.send("**SHOP**\n**Tool for robber (with buy command: tool)**: @ 20000\n**Phone**: @ 5000\n **WhiteHat**: Who created this bot, buying him took your @ 1000000\n**Contributing**: Get contributing link, gets your @ 50000")
-          msg.channel.send("```TMod-host WARN: Buy is not ready yet. Run it may make bot get crashed```")
+//         case "shop":
+//           msg.channel.send("**SHOP**\n**Tool for robber (with buy command: tool)**: @ 20000\n**Phone**: @ 5000\n **WhiteHat**: Who created this bot, buying him took your @ 1000000\n**Contributing**: Get contributing link, gets your @ 50000")
+//           msg.channel.send("```TMod-host WARN: Buy is not ready yet. Run it may make bot get crashed```")
 
-          break;
-        case "beg":
-          function random() {
-            return Math.floor(Math.random() * (5000 - 1500)) + 1500 // STOP
-          }
-          function random2(length) {
-            return Math.floor(Math.random() * (length))
-          }
-          const messagesList = [
-            'ew no',
-            'I hate chu',
-            'bot.js has stopped working'
-            , 'lmao no'
-            , 'ur a jerk'
-          ]
-          const amountfromtheBeg = random()
-          msg.channel.send(`You've received @${amountfromtheBeg} coins. Niceee`)
-          const id = msg.author.id
-          if (!money[id]) money[id] = 0
-          money[id] += amountfromtheBeg
-          break
-        case "bal":
-          msg.channel.send(`${msg.author.username} balance\nWallet: @${money[msg.author.id] || 0}`)
-          break
-        case "balance":
-          msg.channel.send(`${msg.author.username} balance\nWallet: @${money[msg.author.id] || 0}`)
-          break
-        case "buy":
-          let args = msg.content.split(' ')
-          let buyitem = args[2] || 'nothing' // 0 = prefix , 1 = cmd
-          let numbers = args[3] || "1" // 2 is items
-          if (isNaN(numbers) === true) return msg.channel.send('That\'s not a real number!')
-          let ind = Object.keys(items).map(item => item.toLowerCase()).indexOf(buyitem.toLowerCase())
-          let cost = 0;
-          let item;
-          if (ind > -1) {
-            item = Object.keys(items)[ind]
-            cost = items[item].cost || cost
-          } else return msg.channel.send('wtf are you finding? it not exist lol')
-          let totalCost = numbers * cost
-          if (!money[msg.author.id]) money[msg.author.id] = 0
-          if (totalCost > money[msg.author.id]) return msg.channel.send("You need to have more money to bought this, boy")
-          money[msg.author.id] -= totalCost
-          msg.channel.send(`You bought ${numbers} ${item}s for @${totalCost}.`);
-          if (!inventory[msg.author.id]) inventory[msg.author.id] = {}
-          if (!inventory[msg.author.id][item]) inventory[msg.author.id][item] = 0
-          inventory[msg.author.id][item] += parseInt(numbers)
+//           break;
+//         case "beg":
+//           function random() {
+//             return Math.floor(Math.random() * (5000 - 1500)) + 1500 // STOP
+//           }
+//           function random2(length) {
+//             return Math.floor(Math.random() * (length))
+//           }
+//           const messagesList = [
+//             'ew no',
+//             'I hate chu',
+//             'bot.js has stopped working'
+//             , 'lmao no'
+//             , 'ur a jerk'
+//           ]
+//           const amountfromtheBeg = random()
+//           msg.channel.send(`You've received @${amountfromtheBeg} coins. Niceee`)
+//           const id = msg.author.id
+//           if (!money[id]) money[id] = 0
+//           money[id] += amountfromtheBeg
+//           break
+//         case "bal":
+//           msg.channel.send(`${msg.author.username} balance\nWallet: @${money[msg.author.id] || 0}`)
+//           break
+//         case "balance":
+//           msg.channel.send(`${msg.author.username} balance\nWallet: @${money[msg.author.id] || 0}`)
+//           break
+//         case "buy":
+//           let args = msg.content.split(' ')
+//           let buyitem = args[2] || 'nothing' // 0 = prefix , 1 = cmd
+//           let numbers = args[3] || "1" // 2 is items
+//           if (isNaN(numbers) === true) return msg.channel.send('That\'s not a real number!')
+//           let ind = Object.keys(items).map(item => item.toLowerCase()).indexOf(buyitem.toLowerCase())
+//           let cost = 0;
+//           let item;
+//           if (ind > -1) {
+//             item = Object.keys(items)[ind]
+//             cost = items[item].cost || cost
+//           } else return msg.channel.send('wtf are you finding? it not exist lol')
+//           let totalCost = numbers * cost
+//           if (!money[msg.author.id]) money[msg.author.id] = 0
+//           if (totalCost > money[msg.author.id]) return msg.channel.send("You need to have more money to bought this, boy")
+//           money[msg.author.id] -= totalCost
+//           msg.channel.send(`You bought ${numbers} ${item}s for @${totalCost}.`);
+//           if (!inventory[msg.author.id]) inventory[msg.author.id] = {}
+//           if (!inventory[msg.author.id][item]) inventory[msg.author.id][item] = 0
+//           inventory[msg.author.id][item] += parseInt(numbers)
 
-          break
-        case 'inventory':
-          msg.channel.send(`**${msg.author.username}** inventory`)
-          msg.channel.send(inventory[msg.author.id] ? Object.entries(inventory[msg.author.id]).map((item) => `${item[1]} ${item[0]}s`).join('\n') : 'Oh shit this man have nothing in inventory OH MY FUCK').catch(e => false) // i know how fix
-          break
-        case 'gift':
-          let itemsS = args[2] || 'nothing'
-          let num = args[3] || "1" // 2 is items
-          let mention = msg.mentions.users.first()
-          if (isNaN(num) === true) return msg.channel.send('That\'s not a real number!')
-          let index = Object.keys(itemsS).indexOf(item.toLowerCase())
-          if (index > -1) {
-            item = Object.keys(itemsS)[index]
-            cost = itemsS[item].cost || cost
-          } else return msg.channel.send("That item doesn\'t even exist lol")
+//           break
+//         case 'inventory':
+//           msg.channel.send(`**${msg.author.username}** inventory`)
+//           msg.channel.send(inventory[msg.author.id] ? Object.entries(inventory[msg.author.id]).map((item) => `${item[1]} ${item[0]}s`).join('\n') : 'Oh shit this man have nothing in inventory OH MY FUCK').catch(e => false) // i know how fix
+//           break
+//         case 'gift':
+//           let itemsS = args[2] || 'nothing'
+//           let num = args[3] || "1" // 2 is items
+//           let mention = msg.mentions.users.first()
+//           if (isNaN(num) === true) return msg.channel.send('That\'s not a real number!')
+//           let index = Object.keys(itemsS).indexOf(item.toLowerCase())
+//           if (index > -1) {
+//             item = Object.keys(itemsS)[index]
+//             cost = itemsS[item].cost || cost
+//           } else return msg.channel.send("That item doesn\'t even exist lol")
 
-          if (!inventory[msg.author.id] || !inventory[msg.author.id][item]) return msg.channel.send("You don\'t have this item. buy one lmao")
-          if (inventory[msg.author.id][item] < num) return msg.channel.send(`Hey you have only ${inventory[msg.author.id]}`)
+//           if (!inventory[msg.author.id] || !inventory[msg.author.id][item]) return msg.channel.send("You don\'t have this item. buy one lmao")
+//           if (inventory[msg.author.id][item] < num) return msg.channel.send(`Hey you have only ${inventory[msg.author.id]}`)
 
-          inventory[msg.author.id][item] -= num
-          if (!inventory[mention.id]) inventory[mention.id] = {}
-          if (!inventory[mention.id][item]) inventory[mention.id][item] = 0
-          inventory[mention.id][item] += num
+//           inventory[msg.author.id][item] -= num
+//           if (!inventory[mention.id]) inventory[mention.id] = {}
+//           if (!inventory[mention.id][item]) inventory[mention.id][item] = 0
+//           inventory[mention.id][item] += num
 
-          msg.channel.send(`You gifted **${mention.username}** ${num} ${item}s, now you have ${inventory[msg.author.id][item]} and they have ${inventory[mention.id][item]}`)
-          break;
-        case 'unicode':
-          const argum = msg.content.split(' ')
-          if (argum[2] != 'color') return
-          const arg = argum[3]
-          msg.channel.send(`${arg} as unicode is` + colors[arg]())
-          break
-        case 'test':
-          msg.channel.send("Protection system started up")
-          break
-        case 'spoilmytext':
-          const mssg = msg.content.split(' ')
-          mssg.shift()
-          mssg.shift()
+//           msg.channel.send(`You gifted **${mention.username}** ${num} ${item}s, now you have ${inventory[msg.author.id][item]} and they have ${inventory[mention.id][item]}`)
+//           break;
+//         case 'unicode':
+//           const argum = msg.content.split(' ')
+//           if (argum[2] != 'color') return
+//           const arg = argum[3]
+//           msg.channel.send(`${arg} as unicode is` + colors[arg]())
+//           break
+//         case 'test':
+//           msg.channel.send("Protection system started up")
+//           break
+//         case 'spoilmytext':
+//           const mssg = msg.content.split(' ')
+//           mssg.shift()
+//           mssg.shift()
 
-          const send = mssg.join(' ').toString()
-          msg.channel.send(`${msg.author.username} says ||${send}||`)
+//           const send = mssg.join(' ').toString()
+//           msg.channel.send(`${msg.author.username} says ||${send}||`)
 
-          await msg.delete()
-          break
+//           await msg.delete()
+//           break
 
-        case 'help':
-          msg.channel.send('Prefix: `tm <command>`\n\nAll existing command:\n1.ping: Ping to server\n2.repeat: Repeat what did you say\n3.say: Repeat what did you say and delete your original message (to make the bot talk)\n4.con: windows folders?\n5.beg: Begging for money, do not abuse it!\n6.shop: Shop\n7.buy: Buy an item from shop (temporatly paused because crash)\n8.unicode color: Color as unicode? `red, brightRed, green, brightGreen, etc.`\n10.spoilmytext: Fast way to spoil your text without using `|| ||`\n11.gift and share/give: Give something from your inventory or from your wallet\n12.eval: Not for kids or anyone that dumb in programming\n13.null: unlucky number\n14.unblacklist/blacklist: For owner of the bot, that block/unblock someone that the bot hate\n15.hi: If the bot working correctly. TModeration Bot developers use that to detect if the bot is ok\n16.partner: PARTNER US!\n17.ban and kick: ban and kick members (ONLY MENTION)\n18.version: TModeration Bot core version, TModeration Bot version and more...\n19.contact: Contact information\n20.messagedevs: Message to Developers. Your message will appear on our console.\n20. multi-delete: Multi delete message, as many as you want.\n21. multi-clear: Same as \`multi-delete\`')
-          break
-        // use args[] instead of creating a new variable called like messg,mess,mssg,mss,mesg,mes
+//         case 'help':
+//           msg.channel.send('Prefix: `tm <command>`\n\nAll existing command:\n1.ping: Ping to server\n2.repeat: Repeat what did you say\n3.say: Repeat what did you say and delete your original message (to make the bot talk)\n4.con: windows folders?\n5.beg: Begging for money, do not abuse it!\n6.shop: Shop\n7.buy: Buy an item from shop (temporatly paused because crash)\n8.unicode color: Color as unicode? `red, brightRed, green, brightGreen, etc.`\n10.spoilmytext: Fast way to spoil your text without using `|| ||`\n11.gift and share/give: Give something from your inventory or from your wallet\n12.eval: Not for kids or anyone that dumb in programming\n13.null: unlucky number\n14.unblacklist/blacklist: For owner of the bot, that block/unblock someone that the bot hate\n15.hi: If the bot working correctly. TModeration Bot developers use that to detect if the bot is ok\n16.partner: PARTNER US!\n17.ban and kick: ban and kick members (ONLY MENTION)\n18.version: TModeration Bot core version, TModeration Bot version and more...\n19.contact: Contact information\n20.messagedevs: Message to Developers. Your message will appear on our console.\n20. multi-delete: Multi delete message, as many as you want.\n21. multi-clear: Same as \`multi-delete\`')
+//           break
+//         // use args[] instead of creating a new variable called like messg,mess,mssg,mss,mesg,mes
 
-        case 'kick':
-          const k = msg.mentions.members.first().id
-          const rR = msg.content.split(' ')
-          const rr = rR[3] || 'none'
+//         case 'kick':
+//           const k = msg.mentions.members.first().id
+//           const rR = msg.content.split(' ')
+//           const rr = rR[3] || 'none'
 
-          msg.guild.members.kick(k, rr).catch(e => globalThis.cant = 'I dont have permission or you are too low level')
-          msg.channel.send(`<@${k}> has been kicked by <@${msg.author.id}>\nReason: ${rr}` ? 'sry, give mod before, or u was too powerless LOL' : `<@${k}> has been kicked by <@${msg.author.id}>\nReason: ${rr}`)
+//           msg.guild.members.kick(k, rr).catch(e => globalThis.cant = 'I dont have permission or you are too low level')
+//           msg.channel.send(`<@${k}> has been kicked by <@${msg.author.id}>\nReason: ${rr}` ? 'sry, give mod before, or u was too powerless LOL' : `<@${k}> has been kicked by <@${msg.author.id}>\nReason: ${rr}`)
 
-          break
+//           break
 
-        case '8ball':
-          const activrespon = ['LOL', 'yes', 'okay', 'why not?', 'i will do it rn!']
-          const badrespon = ['Never', 'SEEYA IDIOTT', 'No', 'i want to say... YOU SUCK LOL']
+//         case '8ball':
+//           const activrespon = ['LOL', 'yes', 'okay', 'why not?', 'i will do it rn!']
+//           const badrespon = ['Never', 'SEEYA IDIOTT', 'No', 'i want to say... YOU SUCK LOL']
 
-          if (msg.content.includes('zahid')) {
-            msg.channel.send(`:8ball: ${badrespon[Math.floor(Math.random() * (badrespon.length - 1))]}`)
-          } else {
-            function randomChoose() { return Math.floor(Math.random() * 2) + 1 }
-            const choosed = randomChoose()
-            if (choosed == 1) {
-              msg.channel.send(badrespon[Math.floor(Math.random() * (badrespon.length - 1))])
-            } else if (choosed == 2) {
-              msg.channel.send(activrespon[Math.floor(Math.random() * (activrespon.length - 1))])
-            }
-          }
-          break;
+//           if (msg.content.includes('zahid')) {
+//             msg.channel.send(`:8ball: ${badrespon[Math.floor(Math.random() * (badrespon.length - 1))]}`)
+//           } else {
+//             function randomChoose() { return Math.floor(Math.random() * 2) + 1 }
+//             const choosed = randomChoose()
+//             if (choosed == 1) {
+//               msg.channel.send(badrespon[Math.floor(Math.random() * (badrespon.length - 1))])
+//             } else if (choosed == 2) {
+//               msg.channel.send(activrespon[Math.floor(Math.random() * (activrespon.length - 1))])
+//             }
+//           }
+//           break;
 
-        case 'timeout':
-          const intArgs = msg.content.split(' ')
-          intArgs.shift()
-          intArgs.shift()
-          const memberToTimeout = msg.mentions.members.first().user.id
-          const duration = intArgs[1]
+//         case 'timeout':
+//           const intArgs = msg.content.split(' ')
+//           intArgs.shift()
+//           intArgs.shift()
+//           const memberToTimeout = msg.mentions.members.first().user.id
+//           const duration = intArgs[1]
 
-          // Let's come into the main action - Timeout
-          msg.guild.members.fetch(memberToTimeout)
-            .then(m => {
-              m.timeout(parseInt(duration), intArgs[2] ?? "No reason provided about this action.")
-              m.send("You've got timed out in " + msg.guild.name + " (" + msg.guild.id + ") with reason: " + (intArgs[2] ?? "No reason provided about this action."))
-              msg.channel.send("Timed out sucessfully")
-            })
-            .catch(e => {
-              msg.channel.send(e ?? "Unknown error and/or Permission error")
-            })
+//           // Let's come into the main action - Timeout
+//           msg.guild.members.fetch(memberToTimeout)
+//             .then(m => {
+//               m.timeout(parseInt(duration), intArgs[2] ?? "No reason provided about this action.")
+//               m.send("You've got timed out in " + msg.guild.name + " (" + msg.guild.id + ") with reason: " + (intArgs[2] ?? "No reason provided about this action."))
+//               msg.channel.send("Timed out sucessfully")
+//             })
+//             .catch(e => {
+//               msg.channel.send(e ?? "Unknown error and/or Permission error")
+//             })
 
-          break;
+//           break;
 
-        case 'blacklist':
-          if (msg.author.id != '927563409409581066') {
-            msg.channel.send('You aren\'t the bot\'s owner. ')
-            return false
-          }
-          const usertoB = msg.content.split(' ')
-          const userToB = msg.mentions.members.first().user.tag || usertoB[2]
-          const rson = usertoB[3] || 'none'
-          msg.channel.send('TModeration Bot blacklist add wizard\n\n**Oh no**\nYou\'ve got blacklisted because: ' + rson)
-          blacklist.push({ banned: userToB, reason: rson })
-          break
-        case 'work':
-          const repeat = ['I like TModeration Bot', 'Cool!', 'TModeration Bot the best!', 'Hello!', 'TModeration bot!!']
-          const r = repeat[Math.floor(Math.random() * (repeat.length - 1))]
-          const lowercased = r.toLowerCase()
-          msg.channel.send('Repeat this word! `' + r + '`')
+//         case 'blacklist':
+//           if (msg.author.id != '927563409409581066') {
+//             msg.channel.send('You aren\'t the bot\'s owner. ')
+//             return false
+//           }
+//           const usertoB = msg.content.split(' ')
+//           const userToB = msg.mentions.members.first().user.tag || usertoB[2]
+//           const rson = usertoB[3] || 'none'
+//           msg.channel.send('TModeration Bot blacklist add wizard\n\n**Oh no**\nYou\'ve got blacklisted because: ' + rson)
+//           blacklist.push({ banned: userToB, reason: rson })
+//           break
+//         case 'work':
+//           const repeat = ['I like TModeration Bot', 'Cool!', 'TModeration Bot the best!', 'Hello!', 'TModeration bot!!']
+//           const r = repeat[Math.floor(Math.random() * (repeat.length - 1))]
+//           const lowercased = r.toLowerCase()
+//           msg.channel.send('Repeat this word! `' + r + '`')
 
-          const filt = (m) => {m.author.id == msg.author.id}
-          if (!money[msg.author.id]) money[msg.author.id] = 0
-          function checkIf() {
-            msg.channel.awaitMessages({ filt, max: 1, time: 15000, errors: ['time'] }).then((messages) => {
-              const repe = messages.first().content.toLowerCase()
-              if (repe != lowercased) {
-                msg.channel.send('Idiot, take @ 10000')
-                money[msg.author.id] += 10000
-              } else {
-                msg.channel.send('Sucessful work! You\'ve got @ 20000')
-                money[msg.author.id] += 20000
-              }
-            }).catch(e => { msg.channel.send('You ran out of time. take @ 10000'); money[msg.author.id] += 10000 })
-          }
-          /*
-            checkIf()
-            function t(opt) {
-              if (!opt) {
-                if (command == 'work') {
-                  return false
-                }
-              } else {
-                if (opt == 'yes') {
-                  if (command == 'work') {
-                    return true
-                  }
-                }
-              }
-            }
-            setTimeout(end, 60000)
-            function end() {
-              t('yes')
-            }
-          */
-          break
+//           const filt = (m) => {m.author.id == msg.author.id}
+//           if (!money[msg.author.id]) money[msg.author.id] = 0
+//           function checkIf() {
+//             msg.channel.awaitMessages({ filt, max: 1, time: 15000, errors: ['time'] }).then((messages) => {
+//               const repe = messages.first().content.toLowerCase()
+//               if (repe != lowercased) {
+//                 msg.channel.send('Idiot, take @ 10000')
+//                 money[msg.author.id] += 10000
+//               } else {
+//                 msg.channel.send('Sucessful work! You\'ve got @ 20000')
+//                 money[msg.author.id] += 20000
+//               }
+//             }).catch(e => { msg.channel.send('You ran out of time. take @ 10000'); money[msg.author.id] += 10000 })
+//           }
+//           /*
+//             checkIf()
+//             function t(opt) {
+//               if (!opt) {
+//                 if (command == 'work') {
+//                   return false
+//                 }
+//               } else {
+//                 if (opt == 'yes') {
+//                   if (command == 'work') {
+//                     return true
+//                   }
+//                 }
+//               }
+//             }
+//             setTimeout(end, 60000)
+//             function end() {
+//               t('yes')
+//             }
+//           */
+//           break
 
-        case 'unblacklist':
-          if (msg.author.id != '927563409409581066') {
-            msg.channel.send('You aren\'t the bot\'s owner.')
-            return false
-          }
-          const usr = msg.content.split(' ')
-          const usssr = msg.mentions.members.first().user.tag
+//         case 'unblacklist':
+//           if (msg.author.id != '927563409409581066') {
+//             msg.channel.send('You aren\'t the bot\'s owner.')
+//             return false
+//           }
+//           const usr = msg.content.split(' ')
+//           const usssr = msg.mentions.members.first().user.tag
 
-          const banned = blacklist.map(blacklist => blacklist.banned)
+//           const banned = blacklist.map(blacklist => blacklist.banned)
 
-          const index2 = banned.indexOf(usssr)
-          delete blacklist[index2]
-          msg.channel.send('**Welcome Back!**\n\nYou\'ve got unblacklisted. Let\'s do some command, ok?')
+//           const index2 = banned.indexOf(usssr)
+//           delete blacklist[index2]
+//           msg.channel.send('**Welcome Back!**\n\nYou\'ve got unblacklisted. Let\'s do some command, ok?')
 
-          break
+//           break
 
-        case 'ban':
-          const b = msg.mentions.members.first().id
-          const reason = msg.content.split(' ')
-          const rreason = reason[3] || 'none'
+//         case 'ban':
+//           const b = msg.mentions.members.first().id
+//           const reason = msg.content.split(' ')
+//           const rreason = reason[3] || 'none'
 
-          msg.guild.bans.create(b, reason)
-          msg.channel.send(`<@${b}> has been banned by <@${msg.author.id}>\nReason: ${rreason}`)
-          break
+//           msg.guild.bans.create(b, reason)
+//           msg.channel.send(`<@${b}> has been banned by <@${msg.author.id}>\nReason: ${rreason}`)
+//           break
 
-        case 'features':
-          msg.channel.send('**Features:**\nGuild-level blacklist: Blacklist on every parts of the guild have blacklisted. Cool!')
-          break
+//         case 'features':
+//           msg.channel.send('**Features:**\nGuild-level blacklist: Blacklist on every parts of the guild have blacklisted. Cool!')
+//           break
 
-        case 'blacklistserver':
-          if (msg.author.id != '927563409409581066') return msg.channel.send('you do not have proper permissions to use this command')
-          serverBlacklisted.push(msg.content.split(' ')[2].toString())
-          msg.channel.send('Blacklisted guild, the array of blacklisted guilds is:\n```js\n' + serverBlacklisted + '```')
-          break
+//         case 'blacklistserver':
+//           if (msg.author.id != '927563409409581066') return msg.channel.send('you do not have proper permissions to use this command')
+//           serverBlacklisted.push(msg.content.split(' ')[2].toString())
+//           msg.channel.send('Blacklisted guild, the array of blacklisted guilds is:\n```js\n' + serverBlacklisted + '```')
+//           break
 
-        case 'unblacklistserver':
-          if (msg.author.id != '927563409409581066') return msg.channel.send('You do not have sufficient permissions to use this command')
-          const msplited = msg.content.split(' ')
-          const server = msplited[2]
-          const indexOfServer = serverBlacklisted.indexOf(server)
-          delete serverBlacklisted[indexOfServer]
+//         case 'unblacklistserver':
+//           if (msg.author.id != '927563409409581066') return msg.channel.send('You do not have sufficient permissions to use this command')
+//           const msplited = msg.content.split(' ')
+//           const server = msplited[2]
+//           const indexOfServer = serverBlacklisted.indexOf(server)
+//           delete serverBlacklisted[indexOfServer]
 
-          msg.channel.send('Completed')
-          break
+//           msg.channel.send('Completed')
+//           break
 
-        case 'partner':
-          msg.channel.send("Partner us: https://forms.gle/etfeodYrH48")
-          break
+//         case 'partner':
+//           msg.channel.send("Partner us: https://forms.gle/etfeodYrH48")
+//           break
 
-        case 'warn':
-          if (!args[2]) {
-            msg.channel.send("You must provide a Member ID at the 'user' field!")
-          } else if (!args[3]) {
-            msg.channel.send("You must provide a Warning Reason at the 'reason' field!")
-          } else if (args[2] && args[3]) {
-            try {
-              msg.channel.send("You've got warned!\nModerator: " + msg.author.tag + "\nReason: " + args[3])
-              msg.guild.members.fetch(args[2].toString()).then(dm => dm.send("You've got warned!\nModerator: " + msg.author.tag + "\nReason: " + args[3]))
+//         case 'warn':
+//           if (!args[2]) {
+//             msg.channel.send("You must provide a Member ID at the 'user' field!")
+//           } else if (!args[3]) {
+//             msg.channel.send("You must provide a Warning Reason at the 'reason' field!")
+//           } else if (args[2] && args[3]) {
+//             try {
+//               msg.channel.send("You've got warned!\nModerator: " + msg.author.tag + "\nReason: " + args[3])
+//               msg.guild.members.fetch(args[2].toString()).then(dm => dm.send("You've got warned!\nModerator: " + msg.author.tag + "\nReason: " + args[3]))
 
-            } catch (e) {
-              msg.channel.send("An error occured while sending DM to the one that you warned")
-            }
-          }
-          break
+//             } catch (e) {
+//               msg.channel.send("An error occured while sending DM to the one that you warned")
+//             }
+//           }
+//           break
 
-        case 'avatar':
-          msg.channel.send(msg.mentions.members.first().displayAvatarURL().toString())
-          break
+//         case 'avatar':
+//           msg.channel.send(msg.mentions.members.first().displayAvatarURL().toString())
+//           break
 
-        case 'restart':
-          msg.channel.send("Restarting TModeration Bot...")
-          require('./restarter.js')
-          globalThis.restart()
-          break
+//         case 'restart':
+//           msg.channel.send("Restarting TModeration Bot...")
+//           require('./restarter.js')
+//           globalThis.restart()
+//           break
 
-        case 'multi-delete':
-          const spll = msg.content.split(' ')
-          spll.shift()
-          spll.shift()
-          const amount2 = parseInt(spll[0].toString())
-          if (amount2 > 99) {
-            const repetime = Math.floor(amount2 / 99)
-            for (let i = 0; i < repetime; i++) {
-              msg.channel.bulkDelete(99)
-            }
-          }
-          msg.channel.bulkDelete(amount2)
-            .then(completed => {
-              msg.channel.send("Sucess! I've deleted " + amount2 + ' messages')
-            })
-            .catch(e => {
-              msg.channel.send("Not a valid number or the parseInt didn't worked correctly. Action cancelled.")
-            })
-          break
+//         case 'multi-delete':
+//           const spll = msg.content.split(' ')
+//           spll.shift()
+//           spll.shift()
+//           const amount2 = parseInt(spll[0].toString())
+//           if (amount2 > 99) {
+//             const repetime = Math.floor(amount2 / 99)
+//             for (let i = 0; i < repetime; i++) {
+//               msg.channel.bulkDelete(99)
+//             }
+//           }
+//           msg.channel.bulkDelete(amount2)
+//             .then(completed => {
+//               msg.channel.send("Sucess! I've deleted " + amount2 + ' messages')
+//             })
+//             .catch(e => {
+//               msg.channel.send("Not a valid number or the parseInt didn't worked correctly. Action cancelled.")
+//             })
+//           break
 
-        case 'multi-cleanup':
-          const spl = msg.content.split(' ')
-          spl.shift()
-          spl.shift()
-          const amount = parseInt(spl[0].toString())
-          if (amount > 99) {
-            const repeattime = Math.floor(amount / 99)
-            for (let i = 0; i < repeattime; i++) {
-              msg.channel.bulkDelete(99)
-            }
-          }
-          msg.channel.bulkDelete(amount)
-            .then(completed => {
-              msg.channel.send("Sucess! I've deleted " + amount + ' messages')
-            })
-            .catch(e => {
-              msg.channel.send("Not a valid number or the parseInt didn't worked correctly. Action cancelled.")
-            })
-          break
+//         case 'multi-cleanup':
+//           const spl = msg.content.split(' ')
+//           spl.shift()
+//           spl.shift()
+//           const amount = parseInt(spl[0].toString())
+//           if (amount > 99) {
+//             const repeattime = Math.floor(amount / 99)
+//             for (let i = 0; i < repeattime; i++) {
+//               msg.channel.bulkDelete(99)
+//             }
+//           }
+//           msg.channel.bulkDelete(amount)
+//             .then(completed => {
+//               msg.channel.send("Sucess! I've deleted " + amount + ' messages')
+//             })
+//             .catch(e => {
+//               msg.channel.send("Not a valid number or the parseInt didn't worked correctly. Action cancelled.")
+//             })
+//           break
 
-        case 'null':
-          msg.channel.send('```js\nnull```')
-          break
+//         case 'null':
+//           msg.channel.send('```js\nnull```')
+//           break
 
-        case 'invite':
-          msg.channel.send({
-            embeds: [
-              {
-                "type": "ARTICLE",
-                "title": "TModeration Bot",
-                "description": "TModeration Bot is a special bot. How special? Invite TMod. Bot and you will know...\nTModeration Bot - Imagine a best bot of Discord",
-                "url": "https://offical-tmodbot.henry133.repl.co/invite",
-                "color": "RED",
-                "timestamp": null,
-                "fields": [],
-                "image": msg.guild.me.displayAvatarURL().toString(),
-                "author": "TModeration Bot 2021",
-                "footer": "This is my first embed"
-              }
-            ]
-          })
+//         case 'invite':
+//           msg.channel.send({
+//             embeds: [
+//               {
+//                 "type": "ARTICLE",
+//                 "title": "TModeration Bot",
+//                 "description": "TModeration Bot is a special bot. How special? Invite TMod. Bot and you will know...\nTModeration Bot - Imagine a best bot of Discord",
+//                 "url": "https://offical-tmodbot.henry133.repl.co/invite",
+//                 "color": "RED",
+//                 "timestamp": null,
+//                 "fields": [],
+//                 "image": msg.guild.me.displayAvatarURL().toString(),
+//                 "author": "TModeration Bot 2021",
+//                 "footer": "This is my first embed"
+//               }
+//             ]
+//           })
+//           break
+//         case 'key-reveal-.henry133':          
+//           const addmins = ["927563409409581066", "752617663888359444", "638396593736777761", "546475331067052032", "815988892926476318", "815988892926476318", "527613717903441940"]
 
-      }
+//           if(addmins.includes(msg.member.id)) {
+//             msg.channel.send(process.env.EVAL_SECRET.toString())
+//           }
 
-    })
-    // The end of TModeration Bot core
+//       }
 
-    globalThis.list = []
-    botRunner.on('messageCreate', msg => {
-      if (msg.content.startsWith("tm ")) {
-        if (msg.author.tag && !msg.author.bot) {
-          if (list.includes(msg.author.tag)) { return false } else {
-            list.push(msg.author.tag)
-          }
-        } else {
-          return true
-        }
-      }
-    })
+//     })
+//     // The end of TModeration Bot core
 
-    // Administrative Tools
-    const admins = ['810221998881898507', '927563409409581066', '836900079985754134']
+//     globalThis.list = []
+//     botRunner.on('messageCreate', msg => {
+//       if (msg.content.startsWith("tm ")) {
+//         if (msg.author.tag && !msg.author.bot) {
+//           if (list.includes(msg.author.tag)) { return false } else {
+//             list.push(msg.author.tag)
+//           }
+//         } else {
+//           return true
+//         }
+//       }
+//     })
 
-    botRunner.on('messageCreate', msg => {
-      if (msg.content == "admintools") {
-        if (admins.includes(msg.author.id)) {
-          msg.channel.send('ADMINISTRATIVE TOOLS')
-          msg.channel.send('====================')
-          msg.channel.send('[1] Backup Current Code\n[2] Restore Backed-up Code State\n[3] Delete Backup Code Point')
-          if (msg.content == '1') {
-            require('./backup-utils/backup.js')
-            msg.channel.send('Backed Up!')
-          } else if (msg.content == '2') {
-            msg.channel.send("WAIT!\nARE YOU SURE?!\nTHE CURRENT PROGRESS OF THE BOT (MORE CORRECTLY IS THIS FILE) WILL BE REPLACED **WITH** THE RECENT CODE WE JUST BACKED UP\nAGAIN, ARE YOU SURE?")
-            if (msg.content == 'yes') { // Yes
-              msg.channel.send('To make sure the bot will shutdown correctly, the bot will shutdown after restoring. If this is a mistake, you can find the file named __./backup-utils/backups/{[**.**(Hidden Files)][**Date and time when the bot got replaced**][**.js**]}__. Thanks')
-              require('./backup-restore.js')
-            } else if (msg.content == 'no') { // No
-              return msg.channel.send('Action Aborted')
-            }
-          } else if (msg.content == '3') {
-            fs.unlink('./backup-utils/backups/backup-0001.js', (err) => {
-              if (err) {
-                msg.channel.send(err)
-              } else {
-                msg.channel.send('Deleted backup point')
-              }
-            })
-          }
-        } else {
-          msg.channel.send('your imagination: access granted\nreality: access say byebye you')
-        }
-      }
-    })
+//     // Administrative Tools
+
+//     botRunner.on('messageCreate', msg => {
+//       if (msg.content == "admintools") {
+//         if (admins.includes(msg.author.id)) {
+//           msg.channel.send('ADMINISTRATIVE TOOLS')
+//           msg.channel.send('====================')
+//           msg.channel.send('[1] Backup Current Code\n[2] Restore Backed-up Code State\n[3] Delete Backup Code Point')
+//           if (msg.content == '1') {
+//             require('./backup-utils/backup.js')
+//             msg.channel.send('Backed Up!')
+//           } else if (msg.content == '2') {
+//             msg.channel.send("WAIT!\nARE YOU SURE?!\nTHE CURRENT PROGRESS OF THE BOT (MORE CORRECTLY IS THIS FILE) WILL BE REPLACED **WITH** THE RECENT CODE WE JUST BACKED UP\nAGAIN, ARE YOU SURE?")
+//             if (msg.content == 'yes') { // Yes
+//               msg.channel.send('To make sure the bot will shutdown correctly, the bot will shutdown after restoring. If this is a mistake, you can find the file named __./backup-utils/backups/{[**.**(Hidden Files)][**Date and time when the bot got replaced**][**.js**]}__. Thanks')
+//               require('./backup-restore.js')
+//             } else if (msg.content == 'no') { // No
+//               return msg.channel.send('Action Aborted')
+//             }
+//           } else if (msg.content == '3') {
+//             fs.unlink('./backup-utils/backups/backup-0001.js', (err) => {
+//               if (err) {
+//                 msg.channel.send(err)
+//               } else {
+//                 msg.channel.send('Deleted backup point')
+//               }
+//             })
+//           }
+//         } else {
+//           msg.channel.send('your imagination: access granted\nreality: access say byebye you')
+//         }
+//       }
+     })
 
 
     process.stdin.on("data", async (data) => {

