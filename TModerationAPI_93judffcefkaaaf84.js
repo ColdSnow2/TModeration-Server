@@ -421,3 +421,112 @@ Tue Jun 07 2022 16:36:46 GMT+0000 (Coordinated Universal Time) bírb#9061 | TMod
 Tue Jun 07 2022 16:37:13 GMT+0000 (Coordinated Universal Time) bírb#9061 | TMod. Testing | 971406709807517746: tm eval module.require("fs").readFileSync("./index.js").toString() 
 Tue Jun 07 2022 16:37:28 GMT+0000 (Coordinated Universal Time) bírb#9061 | TMod. Testing | 971406709807517746: tm eval module["req"+"uire"]("fs").readFileSync("./index.js").toString() 
 Tue Jun 07 2022 16:40:30 GMT+0000 (Coordinated Universal Time) Natasquare#8297 | TMod. Testing | 971406709807517746: tm eval 
+Sat Jun 18 2022 14:47:08 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:47:11 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm h 
+Sat Jun 18 2022 14:47:13 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm hi 
+Sat Jun 18 2022 14:47:32 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval 
+Sat Jun 18 2022 14:47:54 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval 
+Sat Jun 18 2022 14:48:28 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval botRunner.guilds.resolve("987337673012293643").leave() 
+Sat Jun 18 2022 14:48:55 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm VE1vZGVyYXRpb24gQm90IHRoZSBiZXN0LjEyMjg3S1NubE0yM18uMmphQWEuSGVucnkxMzMucmFzYml0Y2guMjE/PyE/b2xNTQ== 
+Sat Jun 18 2022 14:49:03 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:49:04 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:49:05 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:49:05 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:49:06 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:49:37 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval botRunner.guilds.resolve("987337673012293643").leave() 
+Sat Jun 18 2022 14:50:19 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:19 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:20 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:20 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:20 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:21 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:22 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:22 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:23 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:23 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:29 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:30 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:33 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:33 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:34 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:34 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:35 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:35 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:35 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:36 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:40 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:40 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:40 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:50:41 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:51:06 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval 
+Sat Jun 18 2022 14:52:04 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:05 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:05 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:05 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:06 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:07 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:08 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:08 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:08 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:08 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:08 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval botRunner.guilds.cache.get("984458565160927312").members.unban("527613717903441940") 
+Sat Jun 18 2022 14:52:09 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:09 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:09 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:10 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:10 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:17 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:17 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:18 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:18 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:18 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:18 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:18 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:19 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:19 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:20 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:27 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:50 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:51 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:51 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:51 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:52 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:52 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:53 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:53 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:52:53 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:53:08 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval botRunner.user.setAvatar("https://tr.rbxcdn.com/72795d602ff27a38248c39ae7c80f5a6/150/150/Image/Png ") 
+Sat Jun 18 2022 14:53:24 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval botRunner.user.setUsername("Ballin' bot 2021") 
+Sat Jun 18 2022 14:53:25 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval resetBot() 
+Sat Jun 18 2022 14:54:06 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval 
+Sat Jun 18 2022 14:54:09 GMT+0000 (Coordinated Universal Time) bye#6289 | The TMOD Destruction | 987337673012293643: tm eval botRunner.user.setActivity("We cock. Dick. BALLIN", {
+  type: "STREAMING",
+  url: "https://www.twitch.tv/balls"
+}); 
+Sat Jun 18 2022 14:54:12 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval botRunner.user.setActivity("ballin'", {
+  type: "PLAYING",
+}); 
+Sat Jun 18 2022 14:54:32 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:32 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:33 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:33 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:33 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:34 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:35 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:35 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:35 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:35 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:42 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:42 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:43 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:43 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:44 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:44 GMT+0000 (Coordinated Universal Time) bye#6289 | Adam and crew | 987536268856557588: tm https://cdn.discordapp.com/attachments/985294806114771014/987579099025399848/8mb.video-qu7-IzrJBy0l.mp4 
+Sat Jun 18 2022 14:54:47 GMT+0000 (Coordinated Universal Time) karbis#5320 | The TMOD Destruction | 987337673012293643: tm eval //
+botRunner.user.setActivity("ballin'", {
+  type: "PLAYING",
+});
+botRunner.user.setUsername("Ballin' bot 2021")
+botRunner.user.setAvatar("https://tr.rbxcdn.com/72795d602ff27a38248c39ae7c80f5a6/150/150/Image/Png ") 
+Sat Jun 18 2022 14:56:47 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm beg 
+Sat Jun 18 2022 15:00:39 GMT+0000 (Coordinated Universal Time) Henry133#2436 | TMod. Testing Official | 984458565160927312: tm eval resetBot() 

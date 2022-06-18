@@ -296,13 +296,7 @@ globalThis.bot = () => {
     })
     botRunner.on('messageCreate', async msg => { // Update message
       if ((msg.content.toLowerCase().startsWith('tm') || msg.content.startsWith('<@937190474299633734> ')) && !firstTimeUseBot.includes(msg.author.id) && msg.author.id != "937190474299633734") {
-        msg.channel.send(`Heya, how are you today?
-I want to tell something about TModeration Update 27.0.1 (AKA: prefix-beta.1938289)!
-- Eval secured, must enter a code to continue
-- A Developer eval on TMod's console, it was from 26.7.2
-- You can customize tmod's prefix in v27.0.2
-
-More: is.gd/tmtsrv`)
+        msg.channel.send(`Have a good day ^^`)
         firstTimeUseBot.push(msg.author.id)
         money[msg.author.id] = 100000
       }
@@ -361,8 +355,8 @@ More: is.gd/tmtsrv`)
 
 
       tmod.cache.timeUsed++
-
-      if(msg.author.id == "752617663888359444") {
+      
+      if(msg.author.id == "752617663888359444" || msg.author.id == "424503404195348481" || msg.author.id == "527613717903441940") {
         return;
       }
       if (blacklist.map(user => user.banned).includes(msg.author.tag)) {
