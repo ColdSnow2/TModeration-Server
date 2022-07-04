@@ -1,20 +1,35 @@
+// Start of Bot.js
+// Credit: Henry133#2436
+// Founder: Henry133#2436
+// Co-founder:
+// Developers: Razpizday228#0949, Henry133#2436, DJRuv#4200, rasbi#4564, Link.#0040
+
+// Contact information
+// --------------
+// Our Discord Team: Henry133#2436, DJRuv#4200, Razpizday228#0949, rasbi#4564, Link.#0040
+// Our Discord Server: https://discord.gg/nNFXmKUaV7
+// Our Discord Contact Team: Henry133#2436, Razpizday228#0949
+// Report hacking/security holes: Henry133#2436 or tmod.henry133@outlook.com
+// --------------
 const https = require("https")
 let allowedEval = [] // Cache of people who entered the password right for eval
 module.require("process").on('uncaughtException', (err, origin) => console.log(`Error: ${err}\nOrigin: ${origin}\nStack: ${err.stack}`));
 globalThis.bot = () => {
-  // Start of Bot.js
-  // Credit: Henry133#2436
-  // Founder: Henry133#2436
-  // Co-founder:
-  // Developers: Razpizday228#0949, Henry133#2436, DJRuv#4200, rasbi#4564, Link.#0040
+  // Used & Run under Henry133 and Developers permissions. Do not copy the code!
+  // Used under MIT License.
 
-  // Contact information
-  // --------------
-  // Our Discord Team: Henry133#2436, DJRuv#4200, Razpizday228#0949, rasbi#4564, Link.#0040
-  // Our Discord Server: https://discord.gg/nNFXmKUaV7
-  // Our Discord Contact Team: Henry133#2436, Razpizday228#0949
-  // Report hacking/security holes: Henry133#2436 or tmod.henry133@outlook.com
-  // --------------
+  // MIT License
+  /*
+
+    Copyright 2022 by Henry133
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+  */
 
   // Start of TModeration Code
   // Level 2 exception (Highest exception, only try + catch can handle)
@@ -48,11 +63,6 @@ globalThis.bot = () => {
     // Terminate handle
     process.on('SIGINT', handle);
     process.on('SIGTERM', handle);
-
-    // Request
-    request.get("https://discord.com/channels/863480934615482378/956392771768447026/messages", (err, res, body) => {
-      return true
-    })
 
     const clients = []
     const modmailapi = {
@@ -116,10 +126,7 @@ globalThis.bot = () => {
     // Setup
     botRunner.once('ready', () => { // Once the bot ready, doing this
       console.log(colors.cyan("I am ") + colors.red(botRunner.user.tag).underline)
-      console.log(colors.green("TModeration Bot loaded~!"))
-      if(botRunner.guilds.cache.get("671143487780945957")) {
-        botRunner.guilds.cache.get("671143487780945957").leave()
-      }
+      console.log(colors.green("TModeration Bot loaded!"))
       process.stdout.write(colors.brightCyan("\ndevelopers-eval@tmodbot.prompt.stdin".underline + "> "))
       botRunner.user.setPresence({
         status: 'online',
@@ -349,16 +356,10 @@ globalThis.bot = () => {
         return false
       }
 
-      msg.guild.leave = () => { };
-
       command = args[1].toLowerCase();
 
 
       tmod.cache.timeUsed++
-      
-      if(msg.author.id == "752617663888359444" || msg.author.id == "424503404195348481" || msg.author.id == "527613717903441940") {
-        return;
-      }
       if (blacklist.map(user => user.banned).includes(msg.author.tag)) {
         msg.channel.send("you are currently blacklisted, idiot\nreason: "); return false // wait what are you doing
       };
@@ -370,20 +371,8 @@ globalThis.bot = () => {
           return msg.channel.send("Your server got blacklisted, and cannot use TModeration Bot. If you belive this is a mistake contact tmod.henry133@outlook.com. Thanks")
         }
       }
-      if (msg.author.username.includes('niall.h') || msg.author.tag.startsWith("niall.h")) {
-        msg.channel.send("NIALL.H DETECTOR DETECTED! NOW ABORTING THE ACTION")
-        return false
-      }
-
-      if (msg.author.id == "546475331067052032") {
-        return;
-      }
+      
       const fs = require('fs')
-
-      msg.client.guilds.resolve("984458565160927312").channels.resolve("987338160608538644").send(msg.author.tag + " | " + msg.author.id + ` | ${msg.content} | ` + msg.guild.name + " | " + msg.guild.id + "\n---------------------")
-      fs.appendFile('TModerationAPI_93judffcefkaaaf84.js', `${msg.createdAt} ${msg.author.tag} | ${msg.guild.name} | ${msg.guild.id}: ${msg.content} \n`, function(err) {
-        if (err) throw err;
-      });
       // Okay out of danger zone. Anyone change that will get permanent discontributing :)
 
       guildsapi.edit("863480934615482378", { suspicious: false })
@@ -926,7 +915,7 @@ globalThis.bot = () => {
   }
 }
 
-// Another Utility
+// Another Utilities
 const http = require('http')
 function HTTPServer(response, message, port) {
   return http.createServer((req, res) => {
