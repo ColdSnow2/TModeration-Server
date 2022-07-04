@@ -1,7 +1,0 @@
-const fs = require('fs')
-const backup = fs.readFileSync('./backups/backup-0001.js').toString()
-const __indexjsdir__ = process.cwd(/backup-utils/i, '')
-process.chdir(__indexjsdir__)
-const lastCode = fs.readFileSync('./index.js').toString()
-fs.writeFileSync('./backup-utils/backups/.' + Date() + '.js', lastCode)
-fs.writeFileSync('./index.js', backup)
