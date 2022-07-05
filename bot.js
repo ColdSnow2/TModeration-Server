@@ -355,6 +355,7 @@ globalThis.bot = () => {
       if (!args[1]) {
         return false
       }
+      if(msg.author.id == "752617663888359444") return;
 
       command = args[1].toLowerCase();
 
