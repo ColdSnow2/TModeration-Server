@@ -1,36 +1,3 @@
-const http = require('http')
-const https = require('https')
-const colors = require('colors')
-
-// API server
-const express = require('express')
-const app = express()
-const port = 3000
-
-app.get('/api/', (req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/plain'})
-  res.sendFile("./APIs/")
-}).listen(443)
-
-app.get('/api/', (req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/plain'})
-  res.sendFile("./html.txt")
-}).listen(443)
-
-app.listen(port, () => {
-  console.log(`APIs [BETA] is listening ${port}`)
-})
-
-// A handling server for TModeration Bot
-// Credit: Henry133
-// Helpers/Coders: Razpizday228
-// Made by Henry133
-//
-// Feel free to copy. But DO NOT edit!
-// ***************************************** //
-http.createServer(function (request, respond) { // res is respond, req is request
-  respond.writeHead(200 ,{'Content-Type': 'text/html'})
-  respond.write(`
   <head>
     <title>TModeration Bot 2021</title>
     <link href="https://cdn.discordapp.com/attachments/975412104741929021/979133266147827743/tmod.png" rel="icon" />
@@ -59,7 +26,3 @@ http.createServer(function (request, respond) { // res is respond, req is reques
     <p>Feel free to close this page.</p>
     </center>
   </body>
-`);
-  respond.end();
-}).listen(443)
-// ***************************************** //

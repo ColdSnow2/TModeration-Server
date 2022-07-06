@@ -17,6 +17,7 @@
     "const": "^1.0.0",
     "discord-api-types": "^0.27.1",
     "discord.js": "^13.6.0",
+    "express": "^4.18.1",
     "ffmpeg-static": "^4.4.1",
     "har-schema": "^2.0.0",
     "opusscript": "^0.0.8",
